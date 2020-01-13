@@ -185,18 +185,21 @@ p {
   text-decoration: none;
   display: inline-block;
   position: relative;
+  margin-top:-.8vw;
+  margin-bottom:-.8vw;
 }
 .underlineEffects a:after {    
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
-  height: 2px;
+  height: .1vw;
   left: 50%;
   position: absolute;
   background: #000;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
+  margin-bottom:.7vw;
 }
 .underlineEffects a:hover:after { 
   width: 100%; 
@@ -213,12 +216,6 @@ p {
 GENERAL
 ***********************************/
 
-#wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 a {
   text-decoration: none;
 }
@@ -226,20 +223,6 @@ a {
 img {
   max-width: 100%;
   height:auto;
-}
-
-#jumbo {
-  padding-top: 10px;
-  color: #fff;
-  font-size: 80px;
-  margin-bottom: 10px;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 /**********************************
@@ -257,20 +240,6 @@ header {
 #logo {
   text-align: center;
   margin: 0;
-}
-
-h1 {
-  font-family: 'Changa One', sans-serif;
-  margin: 15px 0;
-  font-size: 2.8em;
-  font-weight: normal;
-  line-height: 0.8em;
-}
-
-h2 {
-  font-size: 1em;
-  margin: -5px 0 0;
-  font-weight: normal;
 }
 
 
@@ -301,44 +270,50 @@ nav a {
 }
 
 /**********************************
-COLORS
+HOMEPAGE
 ***********************************/
 
-/* site body */
-body {
-  background-color: #fff;
-  color: #999;
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* green header */
-header {
-  background: #fff;
-  border-color: #fff;
+h1 {
+  font-family: 'Changa One', sans-serif;
+  margin: 1vw 0;
+  font-size: 2.25vw;
+  font-weight: normal;
+  line-height: 0.8vw;
 }
 
-/* nav background on mobile */
-nav {
-  background: #a5adb7;
+h2 {
+  font-size: 1vw;
+  margin: 0 0 0 0;
+  font-weight: normal;
 }
 
-/* logo text */
-h1, h2 {
+#jumbo {
+  padding-top: 5vw;
   color: #fff;
+  font-size: 5vw;
+  margin-bottom: 1vw;
 }
 
-/* links */
-a {
-  color: #50707b;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-/* nav link */
-nav a, nav a:visited {
-  color: #fff;
-}
+/**********************************
+COLUMNS
+***********************************/
 
-/* selected nav link */
-nav a.selected, nav a:hover {
-  color: #50707b;
+* {
+  box-sizing: border-box;
 }
 
 .column {
@@ -365,5 +340,86 @@ nav a.selected, nav a:hover {
     display: block;
     margin-bottom: 20px;
   }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+h4 {
+  color: #000;
+  font-size: 1.2vw;
+  margin: 0 0 0 0;
+  font-weight: normal;
+}
+
+h5 {
+  color: #000;
+  font-size: 1.6vw;
+  margin: 0 0 0 0;
+  font-weight: normal;
+  text-align:center;
+}
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+  background-color:#a5adb7;
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #fff;
+  padding-bottom:1vw;
+}
+
+.social-icon {
+  width: 2vw;
+  height: 2vw;
+  margin: 0 5px;
+}
+
+/**********************************
+COLORS
+***********************************/
+
+/* site body */
+body {
+  background-color: #fff;
+  color: #999;
+}
+
+/* green header */
+header {
+  background: #fff;
+  border-color: #fff;
+}
+
+/* nav background on mobile */
+nav {
+  background: #a5adb7;
+}
+
+/* links */
+a {
+  color: #50707b;
+}
+
+/* nav link */
+nav a, nav a:visited {
+  color: #fff;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #50707b;
 }
 
