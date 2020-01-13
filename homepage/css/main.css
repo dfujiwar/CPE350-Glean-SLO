@@ -3,7 +3,7 @@ ANIMATIONS
 ***********************************/
 
 #load {
-	background-color: #111d1e;
+	background-color: #fff;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -92,10 +92,126 @@ ANIMATIONS
     100% {transform: translateX(200%)}
 }
 
+/* parallax */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.bgimg-1 {
+  background-image: url("../img/homepage.png");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("../img/pear.png");
+  min-height: 50%;
+}
+
+.bgimg-3 {
+  background-image: url("../img/fruit.png");
+  min-height: 50%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 30px "Lato", sans-serif;
+  color: #111;
+}
+
+p {
+  font: 20px "Lato", sans-serif;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+/* link animations */
+
+.hover_box a {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 30px "Lato", sans-serif;
+  color: #111;
+  border:3px; 
+  border-style:solid; 
+  border-color:#000; 
+  padding: 1em;
+  display: block;
+  transition:0.5s;
+}
+
+.hover_box a:hover {
+  background-color:#a5adb7;
+  color:white;
+}
+
+.underlineEffects a {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.underlineEffects a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underlineEffects a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	.underlineEffects ul {
+		margin-top: 40px;
+	}
+}
+
+
 /**********************************
 GENERAL
 ***********************************/
-
 
 #wrapper {
   display: flex;
@@ -112,10 +228,6 @@ img {
   height:auto;
 }
 
-h3 {
-  margin: 0 0 1em 0;
-}
-
 #jumbo {
   padding-top: 10px;
   color: #fff;
@@ -130,7 +242,6 @@ h3 {
   width: 50%;
 }
 
-
 /**********************************
 HEADING
 ***********************************/
@@ -138,8 +249,8 @@ HEADING
 header {
   position: fixed;
   float: left;
-  margin: 0 0 30px 0;
-  padding: 5px 0 0 0;
+  margin: 0 0 5vw 0;
+  padding: .2vw 0 0 0;
   width: 100%;
 }
 
@@ -163,20 +274,19 @@ h2 {
 }
 
 
-
 /**********************************
 NAVIGATION
 ***********************************/
 
 nav {
   text-align: center;
-  padding: 10px 0;
-  margin: 20px 0 0;
+  padding: .6vw 0;
+  margin: .8vw 0 0;
 }
 
 nav ul {
   list-style: none;
-  margin: 0 10px;
+  margin: 0 1vw;
   padding: 0;
 }
 
@@ -186,27 +296,8 @@ nav li {
 
 nav a {
   font-weight: 800;
-  padding: 15px 10px;
-}
-
-
-
-/**********************************
-FOOTER
-***********************************/
-
-footer {
-  font-size: 0.75em;
-  text-align: center;
-  clear: both;
-  padding-top: 50px;
-  color: #ccc;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
+  padding: 1vw .5vw;
+  font-size: .7vw;
 }
 
 /**********************************
@@ -250,16 +341,29 @@ nav a.selected, nav a:hover {
   color: #50707b;
 }
 
+.column {
+  float: left;
+  width: 33.333%;
+  padding: 0 10px;
+  text-align: center;
+}
 
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-
-
-
-
-
-
-
-
-
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 
