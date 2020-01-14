@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="robots" content="all,index,follow" />
+
+	<title>Change Active State of Links in Sticky Navigation on Page Scroll</title>
+	<meta name="description" content="Change Active State of Links in Sticky Navigation on Page Scroll" />
+
+	<style>
+		html, body { margin: 0; padding: 0; width: 100%; height: 100%;}
+		header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 80px;
+			background: #fff;
+		}
+		nav {
+			width: 960px;
+			height: 80px;
+			margin: 0 auto;
+		}
+		nav ul {
+			margin: 20px 0 0;
+		}
+		nav ul li {
+			display: inline-block;
+			margin: 0 30px 0 0;
+		}
+		
+		a { color: #4D4D4D;  font-family: sans-serif; text-transform: uppercase; text-decoration: none; line-height: 42px; }
+		.active { color: #2dbccb; }
+		
+		.content { width: 100%; height: 100%; }
+		.content > section { width: 100%; height: 100%; }
+		
+		#home { background: #2dbccb; }
+		#about { background: #f6c362; }
+		#services { background-color: #eb7e7f; }
+		#contact { background-color: #415c71; }
+		
+		/* Not included in the download archive */
+		.go-back {margin: 0 auto; padding: 200px 0; max-width: 450px; font-size: 16px; text-align: center;}
+		.go-back a {color: rgba(255,255,255, 0.9); line-height: 180%; text-transform: none; font-weight: normal;}
+	  </style>
+	  <link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+
+<body id="load">
+
+	<header>
+		<nav>
+			<ul>
+				<li><a class="active" href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="content">
+		<section id="home">
+			<h1 class="go-back"><a href="/sticky-header-change-navigation-active-class-on-page-scroll-with-jquery">Go back to Sticky Header: Change Navigation Active Class on Page Scroll with jQuery</a></h1>
+		</section>
+		<section id="about"></section>
+		<section id="services"></section>
+		<section id="contact"></section>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		 $(document).ready(function () {
+				$(document).on("scroll", onScroll);
+
+				$('a[href^="#"]').on('click', function (e) {
+					e.preventDefault();
+					$(document).off("scroll");
+
+					$('a').each(function () {
+						$(this).removeClass('active');
+					})
+					$(this).addClass('active');
+
+					var target = this.hash;
+					$target = $(target);
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top+2
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						$(document).on("scroll", onScroll);
+					});
+				});
+			});
+
+			function onScroll(event){
+				var scrollPosition = $(document).scrollTop();
+				$('nav a').each(function () {
+					var currentLink = $(this);
+					var refElement = $(currentLink.attr("href"));
+					if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+						$('nav ul li a').removeClass("active");
+						currentLink.addClass("active");
+					}
+					else{
+						currentLink.removeClass("active");
+					}
+				});
+			}
+	</script>
+</body>
+</html>

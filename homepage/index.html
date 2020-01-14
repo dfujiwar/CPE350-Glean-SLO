@@ -6,42 +6,49 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
 <body id="load">
+
 <header>
   <a href="index.html" id="logo">
     <img src="img/home2014.png" alt="" class="center">
   </a>
   <nav>
     <ul class="underlineEffects">
-      <li><a href="index.html" class="selected">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+	  <li><a href="#volunteer">Volunteer</a></li>
     </ul>
   </nav>
 </header>
-<div class="bgimg-1" id="wrapper">
+<section id="home">
+<div class="bgimg-1" id="wrapper" style="padding-top:20%;padding-bottom:30%;">
   <section>
     <p id="jumbo" class="home-title"><span>1,452,222 LBS</span></p>
     <h1 style="color:#fff;">OF FRESH, LOCAL PRODUCE</h1>
     <h2 style="color:#fff;">HARVESTED AND DISTRIBUTED ALL THROUGHOUT SLO COUNTY</h2>
   </section>
 </div>
+</section>
 
+<section id="about">
 <div style="color: #777;background-color:white;text-align:center;padding:5% 25%;text-align: center;">
   <div class="hover_box"><a href="index.html">donate your excess produce here!</a></div>
 </div>
 
-<div class="bgimg-2">
+<div class="bgimg-2" style="padding-bottom:25%;">
   <div class="caption">
   <span class="border">ABOUT US</span>
   </div>
 </div>
+</section>
 
+<section id="contact">
 <div style="color: #fff;background-color:#a5adb7;text-align:center;padding:50px 520px;text-align: justify;">
   <p style="color:#fff;font-size:1.2vw;">GleanSLO is a 501c3 non-profit organization and is a program of the Food Bank Coalition of SLO County. We harvest excess fruits and vegetables from farms and homes throughout the county that can be redistributed to those in need through the food bank and its partner agencies.</p>
   <p style="color:#fff;font-size:1.2vw;">GleanSLO is powered by three staff members, a steering committee, and hundreds of volunteers. and donors throughout SLO County.</p>
 </div>
 
-<div class="bgimg-3">
+<div class="bgimg-3" style="padding-bottom:25%;">
   <div class="caption">
   <span class="border">CONTACT US</span>
   </div>
@@ -80,6 +87,10 @@
     </div>
   </div>
   <h5 style="padding-top:1vw;padding-bottom:1vw;">YOU CAN FIND OUR OFFICE AT</h5>
+</div>
+</section>
+<section id="volunteer">
+<div style="color: #777;background-color:white;text-align:center;text-align: justify;">
   <div style="text-align:center;">
     <p>The Food Bank Coalition of SLO County</p>
     <p>1180 Kendall Rd.</p>
@@ -90,11 +101,12 @@
   </div>
 </div>
 
-<div class="bgimg-1">
+<div class="bgimg-4" style="padding-bottom:50%;">
   <div class="caption" style="padding:5% 35%;">
   <div class="hover_box"style="background-color:#50707b;"><a href="index.html" style="color:#fff;">volunteer</a></div>
   </div>
 </div>
+</section>
 </body>
 <footer>
   <a href="https://www.flickr.com/photos/gleanslo/sets"><img src="img/flickr.png" alt="Flickr Logo" class="social-icon"></a>
@@ -102,4 +114,45 @@
   <a href="https://www.instagram.com/gleanslo/"><img src="img/instagram.png" alt="Instagram Logo" class="social-icon"></a>
   <p>2020 Team Harvest.</p>
 </footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		 $(document).ready(function () {
+				$(document).on("scroll", onScroll);
+
+				$('a[href^="#"]').on('click', function (e) {
+					e.preventDefault();
+					$(document).off("scroll");
+
+					$('a').each(function () {
+						$(this).removeClass('active');
+					})
+					$(this).addClass('active');
+
+					var target = this.hash;
+					$target = $(target);
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top+2
+					}, 500, 'swing', function () {
+						window.location.hash = target;
+						$(document).on("scroll", onScroll);
+					});
+				});
+			});
+
+			function onScroll(event){
+				var scrollPosition = $(document).scrollTop();
+				$('nav a').each(function () {
+					var currentLink = $(this);
+					var refElement = $(currentLink.attr("href"));
+					if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+						$('nav ul li a').removeClass("active");
+						currentLink.addClass("active");
+					}
+					else{
+						currentLink.removeClass("active");
+					}
+				});
+			}
+	</script>
 </html>
