@@ -1,0 +1,102 @@
+/**********************************
+HEADER
+***********************************/
+
+.homeimg {
+  width: 40vw;
+}
+
+.nav-link {
+  font: 20px "Lato", sans-serif;
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+/**********************************
+GENERAL
+***********************************/
+
+h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 3.5em "Lato", sans-serif;
+  color: #fff;
+}
+
+h2 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 1.5em "Lato", sans-serif;
+  color: #fff;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 1.3em "Lato", sans-serif;
+  color: #fff;
+}
+
+/**********************************
+FULL SCREEN IMAGES
+***********************************/
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  z-index: -1;
+}
+.bgimg-1 {
+  background-image: url("../img/homepage.png");
+  height: 50%;
+}
+
+.bgimg-2 {
+  background-image: url("../img/pear.png");
+  min-height: 50%;
+}
+
+.bgimg-3 {
+  background-image: url("../img/fruit.png");
+  min-height: 50%;
+}
+
+.bgimg-4 {
+  background-image: url("../img/cutting.png");
+  min_height: 50%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
