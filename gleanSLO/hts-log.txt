@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 09 Jan 2020 16:10:18 at http://www.gleanslo.org/index.php +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.gleanslo.org/index.php -O1 "C:\My Web Sites\gleanSLO" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:33:20	Warning: 	Moved Permanently for www.gleanslo.org/WordPress/
+16:33:20	Warning: 	Redirected link is identical because of 'URL Hack' option: www.gleanslo.org/WordPress/ and gleanslo.org/WordPress/
+16:33:20	Warning: 	File has moved from www.gleanslo.org/WordPress/ to http://gleanslo.org/WordPress/
+16:36:50	Error: 	"Forbidden" (403) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from www.gleanslo.org/index.php)
+16:37:24	Error: 	"Not Found" (404) at link https://static1.squarespace.com/static/5566017be4b0e7bfbea7d23a/56e7b39201dbae088001c9cd/56e7b39201dbae088001c9cf/1446570847844/rabo+long.png (from www.gleanslo.org/sponsorship.php)
+16:37:27	Error: 	"Not Found" (404) at link www.gleanslo.org/images/KSBY article.png (from www.gleanslo.org/awards.php)
+16:50:43	Error: 	"Cancelled by User" (-1) at link www.gleanslo.org/documents/GleanSLO2.mp4 (from www.gleanslo.org/photos.php)
+16:50:43	Error: 	"Not Found" (404) at link www.gleanslo.org/Pickers/images/Nav buttons/gleanweb.png (from www.gleanslo.org/Pickers/NewPickers.php)
+
+HTTrack Website Copier/3.49-2 mirror complete in 40 minutes 25 seconds : 107 links scanned, 100 files written (39204747 bytes overall) [59848263 bytes received at 24679 bytes/sec], 295255 bytes transferred using HTTP compression in 34 files, ratio 30%, 1.6 requests per connection
+(5 errors, 3 warnings, 0 messages)
