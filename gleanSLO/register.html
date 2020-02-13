@@ -27,89 +27,321 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="bg-light page-section" id="register">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading text-uppercase  text-center">Volunteer Registration Form</h2>
+        <h3 class="section-subheading text-muted">Please fill out this form completely, then click Save.
+          Please note that this page will not sign you up to participate in a specific  harvest; remember to visit
+          <a href="volunteer.html#calendar">the Volunteer Harvest calendar</a> to sign up for a particular  harvest.
+
+          <strong>If you have already registered before, you do not have
+            to register again</strong>. If you want to <strong>update</strong> your contact information,
+          go to the <a href="volunteer.html">Volunteer</a> page and click on 'Update.' If you have a name change, send
+          an email to Dick at <a href="mailto:gleanslo@gleanweb.org">gleanslo@gleanweb.org</a>.
+
+          <p></p><strong>If you are under the age of 18 (or are registering for  your child), you MUST bring a copy
+            of our <a href="documents/Release-Waiver-2016-05.pdf" target="_blank">Volunteer Waiver and Liability
+              Agreement</a> signed by a parent or legal guardian to your first glean.</strong>
+        </h3>
+      </div>
+    </div>
+
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">First Name</label>
+          <input type="text" class="form-control" id="inputFirstName" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your first name.</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Last Name</label>
+          <input type="text" class="form-control" id="inputLastName" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your last name.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPrimaryPhone">Phone</label>
+          <input type="text" class="form-control" id="inputPrimaryPhone" placeholder="(000) 000-0000" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your phone number.</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputAltPhone">Alternate Phone</label>
+          <input type="text" class="form-control" id="inputAltPhone" placeholder="(000) 000-0000">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your email address.</div>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPassword">Password (optional)</label>
+          <input type="password" class="form-control" id="inputPassword">
+          <small id="passwordHelp" class="form-text text-muted">Max 15 letters and/or numbers. Used to check your sign-ups,
+            history and waiting list status.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" required>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter your address.</div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your current city of residency.</div>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputState">State</label>
+          <input type="text" class="form-control" id="inputState" value="CA" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your current state of residency.</div>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip Code</label>
+          <input type="text" class="form-control" id="inputZip" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your zip code.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="roles">How do you want to help?</label>
+        <div class="form-group col-md-12">
+          <div class="form-check form-check-inline" id="roles">
+            <input class="form-check-input" type="checkbox" id="roleCheckbox1" value="option1">
+            <label class="form-check-label" for="roleCheckbox1">Picker</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="roleCheckbox2" value="option2">
+            <label class="form-check-label" for="roleCheckbox2">Harvest Assistant</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="roleCheckbox3" value="option3">
+            <label class="form-check-label" for="roleCheckbox3">Produce Transport</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmergencyName">Emergency Contact Name</label>
+          <input type="text" class="form-control" id="inputEmergencyName" placeholder="First and Last Name" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your emergency contact's name.</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmergencyPhone">Emergency Contact Phone Number</label>
+          <input type="text" class="form-control" id="inputEmergencyPhone" placeholder="(000) 000-0000" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your emergency contact's phone number.</div>
+        </div>
+      </div>
+
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputHearFrom">How did you hear about GleanSLO?</label>
+          <select class="form-control" id="inputHearFrom" required>
+            <option value=" " selected="selected">[select]</option>
+            <option value="Neighbor">Neighbor</option>
+            <option value="GleanSLO web site">GleanSLO Web Site</option>
+            <option value="SLO Food Bank">SLO Food Bank</option>
+            <option value="GleanSLO volunteer">GleanSLO volunteer</option>
+            <option value="Communication Students ">Cal Poly Communication Students</option>
+            <option value="Newspaper">Newspaper</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Flyer">Flyer</option>
+            <option value="Craigslist">Craigslist</option>
+            <option value="Other urban harvesting group">Other urban harvesting group</option>
+            <option value="Friend">Friend</option>
+            <option value="Web search">Web search</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please select one.</div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            I agree to the <a data-toggle="modal" data-target="#termsOfParticipation" href="">Terms of Participation</a>.
+          </label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+    <div class="row">
+      <div class="col-lg-12">
+        <p></p>Privacy: Information entered here is used solely by  GleanSLO. We do not share, sell, or
+        distribute  your personal information.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; GleanSLO</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/gleanslo?ref=hl">
+              <i class="fab fa-facebook-f"></i>
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
+          <li class="list-inline-item">
+            <a href="https://www.flickr.com/photos/gleanslo/sets">
+              <i class="fab fa-flickr"></i>
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="volunteer.html">Volunteer</a>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/gleanslo/">
+              <i class="fab fa-instagram"></i>
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Resources</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://www.gleanslo.org/login.php?accesscheck=%2FUtilities%2FPagesIndex.php">Administrative</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</footer>
 
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; GleanSLO</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/gleanslo?ref=hl">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.flickr.com/photos/gleanslo/sets">
-                <i class="fab fa-flickr"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/gleanslo/">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Resources</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Administrative</a>
-            </li>
-          </ul>
-        </div>
+<div class="modal fade" id="termsOfParticipation" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TermsTitle">GleanSLO Terms of Participation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>By registering as a volunteer with GleanSLO and attending events that we sponsor, you are agreeing to
+          the following terms of participation:</p>
+        <ul class="list-group">
+          <li class="list-group-item">The mission of GleanSLO is to reduce hunger, build community and promote sustainable living. I will conduct myself in a manner consistent with that mission while attending GleanSLO sponsored events. </li>
+          <li class="list-group-item">I will read and check off the Release and Waiver of Liability, Assumption of Risk, and Indemnity Agreement when I sign up for harvests.</li>
+          <li class="list-group-item">I will cancel my roster spot if, after signing up for a harvest, I find that I am unable to attend.</li>
+          <li class="list-group-item">I will be punctual in arriving at harvests.</li>
+          <li class="list-group-item">I will not bring other adults to harvests who have not signed up and been added to the roster.</li>
+          <li class="list-group-item">I will not smoke at harvests.</li>
+          <li class="list-group-item">I will not bring alcohol to harvests.</li>
+          <li class="list-group-item">I will not bring firearms to harvests.</li>
+          <li class="list-group-item">I will not bring glass containers to harvests. </li>
+          <li class="list-group-item">I understand that harvests are conducted on private property that the owner has granted GleanSLO permission to enter and harvest. I will conduct myself in a manner that is respectful of the owner's property at all times.</li>
+          <li class="list-group-item">I will be respectful of other participants at harvests.</li>
+          <li class="list-group-item">I will listen to, and follow the rules of, the orientation about the harvest given by the harvest leader.</li>
+          <li class="list-group-item">I will follow all directions given to me by the harvest leader or designated assistants.</li>
+          <li class="list-group-item">I understand that GleanSLO reserves the right to deny me entry to a harvest, or require me to leave a harvest, or remove me from the registration list if I do not follow these Terms of Participation.    </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
-  </footer>
+  </div>
+</div>
 
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+<!-- Contact form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/agency.min.js"></script>
 
 </body>
 
