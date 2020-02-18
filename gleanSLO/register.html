@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Agency - Start Bootstrap Theme</title>
+  <title>GleanSLO - Volunteer Registration</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,17 +75,17 @@
       </div>
     </div>
 
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" action="http://www.gleanslo.org/pickerinsert.php?" id="pickerinsertform" name="pickerinsertform" method="POST" novalidate>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputFirstName">First Name</label>
-          <input type="text" class="form-control" id="inputFirstName" required>
+          <label for="fname">First Name</label>
+          <input name="fname" type="text" class="form-control" id="fname" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your first name.</div>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputLastName">Last Name</label>
-          <input type="text" class="form-control" id="inputLastName" required>
+          <label for="lname">Last Name</label>
+          <input name="fname" type="text" class="form-control" id="lname" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your last name.</div>
         </div>
@@ -93,56 +93,56 @@
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputPrimaryPhone">Phone</label>
-          <input type="text" class="form-control" id="inputPrimaryPhone" placeholder="(000) 000-0000" required>
+          <label for="phone">Phone</label>
+          <input name ="phone" type="text" class="form-control" id="phone" placeholder="(000) 000-0000" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your phone number.</div>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputAltPhone">Alternate Phone</label>
-          <input type="text" class="form-control" id="inputAltPhone" placeholder="(000) 000-0000">
+          <label for="phone2">Alternate Phone</label>
+          <input name="phone2" type="text" class="form-control" id="phone2" placeholder="(000) 000-0000">
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-8">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" required>
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your email address.</div>
         </div>
         <div class="form-group col-md-4">
-          <label for="inputPassword">Password (optional)</label>
-          <input type="password" class="form-control" id="inputPassword">
+          <label for="code">Password (optional)</label>
+          <input type="password" class="form-control" id="code" name="volpass" maxlength="15">
           <small id="passwordHelp" class="form-text text-muted">Max 15 letters and/or numbers. Used to check your sign-ups,
             history and waiting list status.</small>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" required>
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" required>
         <div class="valid-feedback">Looks good!</div>
         <div class="invalid-feedback">Please enter your address.</div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-8">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" required>
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" name="city" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your current city of residency.</div>
         </div>
         <div class="form-group col-md-2">
-          <label for="inputState">State</label>
-          <input type="text" class="form-control" id="inputState" value="CA" required>
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" name="state" value="CA" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your current state of residency.</div>
         </div>
         <div class="form-group col-md-2">
-          <label for="inputZip">Zip Code</label>
-          <input type="text" class="form-control" id="inputZip" required>
+          <label for="zip">Zip Code</label>
+          <input type="text" class="form-control" id="zip" name="zip" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your zip code.</div>
         </div>
@@ -152,16 +152,16 @@
         <label for="roles">How do you want to help?</label>
         <div class="form-group col-md-12">
           <div class="form-check form-check-inline" id="roles">
-            <input class="form-check-input" type="checkbox" id="roleCheckbox1" value="option1">
-            <label class="form-check-label" for="roleCheckbox1">Picker</label>
+            <input class="form-check-input" type="checkbox" id="harvester_0" name="harvester" value="Yes" checked="checked">
+            <label class="form-check-label" for="harvester_0">Picker</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="roleCheckbox2" value="option2">
-            <label class="form-check-label" for="roleCheckbox2">Harvest Assistant</label>
+            <input name="intake" class="form-check-input" type="checkbox" id="intake_0" value="Yes" >
+            <label class="form-check-label" for="intake_0">Harvest Assistant</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="roleCheckbox3" value="option3">
-            <label class="form-check-label" for="roleCheckbox3">Produce Transport</label>
+            <input name="truck" class="form-check-input" type="checkbox" id="truck_0" value="option3">
+            <label class="form-check-label" for="truck_0">Produce Transport</label>
           </div>
         </div>
       </div>
@@ -169,13 +169,13 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmergencyName">Emergency Contact Name</label>
-          <input type="text" class="form-control" id="inputEmergencyName" placeholder="First and Last Name" required>
+          <input name="emerg" type="text" class="form-control" id="inputEmergencyName" placeholder="First and Last Name" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your emergency contact's name.</div>
         </div>
         <div class="form-group col-md-6">
           <label for="inputEmergencyPhone">Emergency Contact Phone Number</label>
-          <input type="text" class="form-control" id="inputEmergencyPhone" placeholder="(000) 000-0000" required>
+          <input name="ephone" type="text" class="form-control" id="inputEmergencyPhone" placeholder="(000) 000-0000" required>
           <div class="valid-feedback">Looks good!</div>
           <div class="invalid-feedback">Please enter your emergency contact's phone number.</div>
         </div>
@@ -184,8 +184,8 @@
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputHearFrom">How did you hear about GleanSLO?</label>
-          <select class="form-control" id="inputHearFrom" required>
+          <label for="how_hear">How did you hear about GleanSLO?</label>
+          <select class="form-control" id="how_hear" required>
             <option value=" " selected="selected">[select]</option>
             <option value="Neighbor">Neighbor</option>
             <option value="GleanSLO web site">GleanSLO Web Site</option>
@@ -209,14 +209,15 @@
 
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
-          <label class="form-check-label" for="invalidCheck">
+          <input class="form-check-input" type="checkbox" id="waiver1" name="waiver1" required>
+          <label class="form-check-label" for="waiver1">
             I agree to the <a data-toggle="modal" data-target="#termsOfParticipation" href="">Terms of Participation</a>.
           </label>
           <div class="invalid-feedback">You must agree before submitting.</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" name="submit" id="submit" value="Save">Submit</button>
+      <input type="hidden" name="MM_insert" value="pickerinsertform" />
     </form>
 
 
@@ -262,7 +263,7 @@
             <a href="#">Resources</a>
           </li>
           <li class="list-inline-item">
-            <a href="http://www.gleanslo.org/login.php?accesscheck=%2FUtilities%2FPagesIndex.php">Administrative</a>
+            <a href="administration.html">Administrative</a>
           </li>
         </ul>
       </div>
