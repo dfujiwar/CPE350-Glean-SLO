@@ -459,7 +459,7 @@ header.masthead .volunteer .intro-text .intro-text-main {
 
 #team .team-item .team-link .team-hover {
   position: absolute;
-  width: 100%;
+  width: 92%;
   height: 100%;
   transition: all ease 0.5s;
   opacity: 0;
