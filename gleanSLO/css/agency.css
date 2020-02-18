@@ -40,7 +40,7 @@ h6 {
 }
 
 .page-section h2.section-heading {
-  font-size: 3.5vw;
+  font-size: 3vw;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -182,7 +182,7 @@ header.masthead .home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/homebg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: 0% 75%;
+  background-position: 0% 25%;
   background-size: cover;
   position:relative;
 }
@@ -194,6 +194,17 @@ header.masthead .volunteer {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0% 75%;
+  background-size: cover;
+  position:relative;
+}
+
+header.masthead .steering {
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/steering/SteeringCommittee.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0% 28%;
   background-size: cover;
   position:relative;
 }
