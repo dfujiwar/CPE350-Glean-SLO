@@ -622,6 +622,10 @@ header.masthead .volunteer .intro-text .intro-text-main {
   margin-top: 0;
 }
 
+.resources img {
+  height: 40%;
+}
+
 section#contact {
   background-color: #212529;
   background-image: url("../img/map-image.png");
@@ -719,8 +723,6 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #be2025;
 }
-
-
 
 
 
