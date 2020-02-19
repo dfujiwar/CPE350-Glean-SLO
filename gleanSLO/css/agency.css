@@ -622,15 +622,14 @@ header.masthead .volunteer .intro-text .intro-text-main {
   margin-top: 0;
 }
 
-.resources img {
-  height: 40%;
+.partners {
+  display: flex;
+  align-items: center;
 }
 
-section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.partners img {
+  margin: auto;    
+  display: block;
 }
 
 section#contact .section-heading {
