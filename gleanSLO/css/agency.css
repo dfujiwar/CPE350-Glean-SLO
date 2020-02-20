@@ -293,6 +293,12 @@ header.masthead .volunteer .intro-text .intro-text-main {
   }
 }
 
+@media (max-width:629px) {
+  .about img {
+    display: none;
+  }
+}
+
 .service-heading {
   margin: 15px 0;
   text-transform: none;
@@ -646,6 +652,11 @@ header.masthead .volunteer .intro-text .intro-text-main {
 .partners img {
   margin: auto;    
   display: block;
+  transition: transform .2s; /* Animation */
+}
+
+.partners img:hover {
+  transform: scale(1.1);
 }
 
 section#contact .section-heading {
