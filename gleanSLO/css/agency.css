@@ -40,7 +40,7 @@ h6 {
 }
 
 .page-section h2.section-heading {
-  font-size: 3vw;
+  font-size: 5vw;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -54,9 +54,12 @@ h6 {
   font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-@media (min-width: 768px) {
+@media (min-width: 567px) {
     section {
         padding: 150px 0;
+    }
+    .page-section h2.section-heading {
+        font-size: 4vw;
     }
 }
 
@@ -84,11 +87,11 @@ img::-moz-selection {
 
 .btn {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .btn-xl {
-  font-size: 1.5vw;
+  font-size: 3vw;
   padding: 1.5vw 1.5vw;
 }
 
@@ -106,6 +109,19 @@ img::-moz-selection {
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(190, 32, 37, 0.5) !important;
 }
+
+@media (min-width: 567px) {
+    .btn {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-weight: 700;
+    }
+
+    .btn-xl {
+      font-size: 1.5vw;
+      padding: 1.5vw 1.5vw;
+    }
+}
+
 
 #mainNav {
   background-color: #ffffff;
@@ -723,15 +739,23 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #be2025;
 }
 
-
-
 #register .container{
     padding-top: 5vw;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     #register .container{
         padding-top: 5vw;
     }
 }
 
+#calendar p {
+    font-size: 2.5vw;
+}
+#register p{
+    font-size: 2.5vw;
+}
+@media (min-width: 576px) {
+    #calendar p {
+        font-size: 1.2vw;
+    }
+}

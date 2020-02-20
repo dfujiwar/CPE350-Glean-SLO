@@ -23,6 +23,111 @@
 
   <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
+  <style type="text/css">
+
+
+
+
+.SH #container {
+	background: #FFFFFF;
+	margin: 0 auto;
+}
+.SH #mainContent {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0px;
+	margin-left: 0;
+	padding-top: 0px;
+	padding-right: 2%;
+	padding-bottom: 0px;
+	padding-left: 3%;
+}
+
+/***************** calendar view harvest cells ****************/
+/** The entire calendar table**/
+#caltable {
+	border-collapse: collapse;
+	width: 56vw;
+	border: 0.2vw solid #545454;
+}
+#caltable tr {
+    vertical-align: top;
+}
+#caltable tr td {
+    overflow:auto;
+}
+/**** #calendar { width: 860px; height:3000px; overflow-y: auto; } ***/
+#cell {
+    width: 8vw;
+}
+#cell tr {
+	background-color: #DBFEFF;
+}
+#cell td {
+	height: 1pt;
+	border:1px solid #000000;
+}
+/** Days of the Week header**/
+#daysofweek th {
+    border:1px solid white;
+    background-color:#545454;
+    color:#ffffff;
+    font-size: 1.5vw;
+}
+td {
+    text-align:center;
+    border:1px solid black;
+    font-size: 1vw;
+}
+/** Non-occupied calendar cells**/
+td {
+    background-color: #ffffff;
+    color: #000000;
+}
+/** Cell headers **/
+th {
+    border:0px;
+    font-weight: bold;
+    font-size: 1.5vw;
+    background-color: #ededed;
+    color: #000000;
+    text-align:center;
+}
+/** Waitlisted calendar event**/
+.full {
+    background-color: #dd343a;
+}
+/**Available calendar event**/
+.notfull {
+    background-color:#62E06F;
+}
+.table td,
+.table th{
+    padding: 0.25vw 0.75vw 0.5vw 0.75vw;
+}
+
+
+/************** pop up events ******************/
+.pop {
+	display: none;
+	width: 56vw;
+	overflow: auto;
+	padding: 5px;
+}
+.pop th {
+    border:1px solid black;
+}
+#harvestlist {
+    border-collapse: collapse;
+}
+#harvestlist td {
+	border:1px solid black;
+	background-color:#ffffff;
+}
+
+@charset 'utf-8';
+</style>
+
 
 </head>
 
@@ -63,13 +168,637 @@
         <div class="intro-text-main text-uppercase">If it's your first time gleaning, please register!</div>
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="register.html">Register</a>
         <div class="intro-text-main text-uppercase">Then continue to see our Harvest Calendar!</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#calendar">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#mainContent">
           <i class="fas fa-arrow-down"></i>
         </a>
       </div>
     </div>
   </div>
 </header>
+
+
+<!--Harvest calendar-->
+
+<body class="SH"  onload="newDoc()">
+    <div id="container" class="page-section">
+      <div id="mainContent" >
+        <h2 class="section-heading text-uppercase  text-center">Harvests and Other Events</h2>
+        <div id="calendar">
+          <p>Before signing up for an event, please be sure that you and each person signing up has registered previously on the <a href="register.html" title="Harvester registration">Registration</a> page. If you have already registered as a volunteer you do not have to do so again. Each adult must sign up separately  for events. To sign up for an event, click on the 'Sign up for this event'  button. Once you sign up, you will receive a confirmation letter with the exact  address and detailed information about the event. If the roster is full, your name will be  added to a waiting list and you will receive an email if anyone ahead of you  cancels their spot.</p>
+          <p>Move the mouse over harvests on the calendar to see details and a sign up link below the calendar. Green harvests have roster openings left; yellow harvests have a waiting list. <strong>If you are using a smart phone you may have to scroll the top half of the page to see everything.</strong></p>
+          <p>&nbsp;</p>
+          <div class="table-responsive">
+            <table id="caltable" align="center" class="table">
+              <thead>
+                <tr id="daysofweek">
+                  <th scope="col">Sun</th>
+                  <th scope="col">Mon</th>
+                  <th scope="col">Tue</th>
+                  <th scope="col">Wed</th>
+                  <th scope="col">Thu</th>
+                  <th scope="col">Fri</th>
+                  <th scope="col">Sat</th>
+                </tr>
+              </thead>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover" class="table">
+                  <thead><tr><th>Jan 9</th></tr></thead>
+
+                  <tr onclick="popup(pop5284),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr>
+                    <th>Jan 10</th>
+                  </tr>
+                  <tr onclick="popup(pop5280),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 11</th></tr>
+
+                  <tr onclick="popup(pop5301),scrollWin()">
+                    <td class="full" onmouseover="lookdown(this)" onmouseout="lookup(this,'tangerines')">tangerines </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr id="wk4">
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 12</th></tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 13</th></tr>
+
+                  <tr onclick="popup(pop5306),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                  </tr>
+                </table>
+             </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 14</th></tr>
+
+                  <tr onclick="popup(pop5308),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'apples')">apples </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 15</th></tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 16</th></tr>
+
+                  <tr onclick="popup(pop5285),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                  </tr>
+                </table>
+              </td>
+              <td style="background-color:#ededed;overflow:hidden;">
+                <table id="cell" class="table table-borderless table-condensed table-hover">
+                  <tr><th>Jan 17</th></tr>
+
+                  <tr onclick="popup(pop5307),scrollWin()">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                </tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 18</th></tr>
+              </table>
+            </td>
+          </tr>
+          <tr id="wk5">
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 19</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 20</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 21</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 22</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 23</th></tr>
+
+                <tr onclick="popup(pop5286),scrollWin()">
+                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                </tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 24</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 25</th></tr>
+              </table>
+            </td>
+          </tr>
+          <tr id="wk6">
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 26</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 27</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 28</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 29</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 30</th></tr>
+
+                <tr onclick="popup(pop5287),scrollWin()">
+                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                </tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Jan 31</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 1</th></tr>
+              </table>
+            </td>
+          </tr>
+          <tr id="wk7">
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 2</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 3</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 4</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 5</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 6</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 7</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 8</th></tr>
+              </table>
+            </td>
+          </tr>
+          <tr id="wk8">
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 9</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 10</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 11</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 12</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 13</th></tr>
+              </table>
+            </td>
+            <td style="background-color:#ededed;overflow:hidden;">
+              <table id="cell" class="table table-borderless table-condensed table-hover">
+                <tr><th>Feb 14</th></tr>
+              </table>
+            </td>
+          </tr>
+          </table>
+            <br class="clearfloat" />
+          </div>
+        </div><!-- end of calendar div----------------------------------------------- -->
+        <br />
+        <div class="container">
+          <div class="d-flex justify-content-center">
+          <div style="width:56vw;"> <!-- shell placeholder for popup divs div spacing------------------------------- -->
+          <div class="pop" id="pop5284">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#ffffff; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5284"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#62E06F;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Thursday, Jan 9<br />7:30 PM</td>
+                <td>FARMERS MARKET</td>
+                <td>San Luis Obispo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                  Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5280">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5280"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Friday, Jan 10<br />9:00 AM</td>
+                <td>kiwifruits</td>
+                <td>Nipomo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>11</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5301">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color: #dd343a; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5301"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Add name to waiting list" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Saturday, Jan 11<br />9:00 AM</td>
+                <td>tangerines</td>
+                <td>Arroyo Grande</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>4</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a neighborhood harvest of tangerines at a home in Arroyo Grande. Ladders and pole pickers may be necessary to reach all of the fruit. Ladder-friendly Adults and teens only.  </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5306">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5306"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Monday, Jan 13<br />9:00 AM</td>
+                <td>kiwifruits</td>
+                <td>Nipomo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>1</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5308">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5308"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Tuesday, Jan 14<br />9:00 AM</td>
+                <td>apples</td>
+                <td>SLO, See Canyon</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>1</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is an apple glean at an orchard in See Canyon- read special instructions about where to meet after signing up. Adults and teens only, please! </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5285">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5285"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Thursday, Jan 16<br />7:30 PM</td>
+                <td>FARMERS MARKET</td>
+                <td>San Luis Obispo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                  Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5307">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5307"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Friday, Jan 17<br />9:00 AM</td>
+                <td>kiwifruits</td>
+                <td>Nipomo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>1</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5286">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5286"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Thursday, Jan 23<br />7:30 PM</td>
+                <td>FARMERS MARKET</td>
+                <td>San Luis Obispo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                  Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+          <div class="pop" id="pop5287">
+            <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
+              <tr>
+                <th rowspan="6" style="background-color:#62E06F; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                  <input name="harvesttemp" type="hidden" value="5287"/>
+                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#bdedff;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
+                </form></th>
+                <th>When</th>
+                <th>Crop or task</th>
+                <th>General<br />location</th>
+              </tr>
+              <tr>
+                <td>Thursday, Jan 30<br />7:30 PM</td>
+                <td>FARMERS MARKET</td>
+                <td>San Luis Obispo</td>
+              </tr>
+              <tr>
+                <th>Total volunteers<br />needed</th>
+                <th>Number on<br />roster</th>
+                <th>Number on<br />waiting list</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                  Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
+              </tr>
+              <tr>
+                <td colspan = "4" class="leftjustify">
+                  Getting there:
+                  You will see the harvest address after signing up.            </td>
+              </tr>
+            </table></div>
+          <!-- end of pop -->
+        </div> <!-- end of popup div spacing shell----------------------------------------------- -->
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
 
 
 <!-- Footer -->
@@ -127,6 +856,31 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/agency.min.js"></script>
+
+<!---Calendar scripts --->
+<script type="text/javascript">
+var tempvar = null;
+function popup(show){
+	show.style.display="block"
+	if (tempvar && (tempvar !== show)) tempvar.style.display="none"
+	tempvar=show
+}
+function scrollWin() {
+if(window.pageYOffset<=470)
+{
+    setTimeout(function() {
+		window.scrollTo(0,window.pageYOffset+3);
+        scrollWin();
+    }, 5);
+   }
+}
+function lookdown(ele) { ele.innerHTML="Click to see details below"; }
+function lookup(ele,crop) { ele.innerHTML=crop; }
+</script>
+<script>
+function newDoc() {if(screen.width<801) window.location.assign("calendar-m.html");}
+</script>
+
 
 </body>
 
