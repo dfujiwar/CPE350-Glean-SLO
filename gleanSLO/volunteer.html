@@ -24,10 +24,6 @@
   <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
   <style type="text/css">
-
-
-
-
 .SH #container {
 	background: #FFFFFF;
 	margin: 0 auto;
@@ -102,10 +98,9 @@ th {
     background-color:#62E06F;
 }
 .table td,
-.table th{
+.table th {
     padding: 0.25vw 0.75vw 0.5vw 0.75vw;
 }
-
 
 /************** pop up events ******************/
 .pop {
@@ -124,6 +119,22 @@ th {
 	border:1px solid black;
 	background-color:#ffffff;
 }
+.modal-body td {
+  font-size: 1.2vw;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 1.5vw;
+}
+.modal-body th {
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 1.5vw;
+}
+
+.modal-content {
+  width: 300vw;
+}
+
 
 @charset 'utf-8';
 </style>
@@ -179,7 +190,6 @@ th {
   </div>
 </header>
 
-
 <!--Harvest calendar-->
 
 <body class="SH"  onload="newDoc()">
@@ -212,8 +222,8 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover" class="table">
                   <thead><tr><th>Jan 9</th></tr></thead>
 
-                  <tr onclick="popup(pop5284),scrollWin()">
-                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                  <tr data-toggle="modal" data-target="#pop5284">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmer's Market')">Farmer's Market</td>
                   </tr>
                 </table>
               </td>
@@ -222,7 +232,7 @@ th {
                   <tr>
                     <th>Jan 10</th>
                   </tr>
-                  <tr onclick="popup(pop5280),scrollWin()">
+                  <tr data-toggle="modal" data-target=#pop5280">
                     <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
                   </tr>
                 </table>
@@ -231,7 +241,7 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover">
                   <tr><th>Jan 11</th></tr>
 
-                  <tr onclick="popup(pop5301),scrollWin()">
+                  <tr data-toggle="modal" data-target="pop5301">
                     <td class="full" onmouseover="lookdown(this)" onmouseout="lookup(this,'tangerines')">tangerines </td>
                   </tr>
                 </table>
@@ -247,7 +257,7 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover">
                   <tr><th>Jan 13</th></tr>
 
-                  <tr onclick="popup(pop5306),scrollWin()">
+                  <tr data-toggle="modal" data-target="pop5306">
                     <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
                   </tr>
                 </table>
@@ -256,7 +266,7 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover">
                   <tr><th>Jan 14</th></tr>
 
-                  <tr onclick="popup(pop5308),scrollWin()">
+                  <tr data-toggle="modal" data-target="pop5308">
                     <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'apples')">apples </td>
                   </tr>
                 </table>
@@ -270,8 +280,8 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover">
                   <tr><th>Jan 16</th></tr>
 
-                  <tr onclick="popup(pop5285),scrollWin()">
-                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                  <tr data-toggle="modal" data-target="pop5285">
+                    <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmer's Market')">Farmer's Market </td>
                   </tr>
                 </table>
               </td>
@@ -279,7 +289,7 @@ th {
                 <table id="cell" class="table table-borderless table-condensed table-hover">
                   <tr><th>Jan 17</th></tr>
 
-                  <tr onclick="popup(pop5307),scrollWin()">
+                  <tr data-toggle="modal" data-target="pop5307" >
                     <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
                 </tr>
               </table>
@@ -315,8 +325,8 @@ th {
               <table id="cell" class="table table-borderless table-condensed table-hover">
                 <tr><th>Jan 23</th></tr>
 
-                <tr onclick="popup(pop5286),scrollWin()">
-                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                <tr data-toggle="modal" data-target="pop5286" >
+                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmer's Market')">Farmer's Market </td>
                 </tr>
               </table>
             </td>
@@ -356,8 +366,8 @@ th {
               <table id="cell" class="table table-borderless table-condensed table-hover">
                 <tr><th>Jan 30</th></tr>
 
-                <tr onclick="popup(pop5287),scrollWin()">
-                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'FARMERS MARKET')">FARMERS MARKET </td>
+                <tr data-toggle="modal" data-target="pop5287">
+                  <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmer's Market')">Farmer's Market </td>
                 </tr>
               </table>
             </td>
@@ -445,24 +455,77 @@ th {
             <br class="clearfloat" />
           </div>
         </div><!-- end of calendar div----------------------------------------------- -->
-        <br />
-        <div class="container">
-          <div class="d-flex justify-content-center">
-          <div style="width:56vw;"> <!-- shell placeholder for popup divs div spacing------------------------------- -->
-          <div class="pop" id="pop5284">
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="pop5284" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="TermsTitle">Farmer's Market Harvest</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th scope="row">When</th>
+                  <td>Thursday, Jan 9 at 7:30 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Crop or task</th>
+                  <td>Farmer's Market</td>
+                </tr>
+                <tr>
+                  <th scope="row">General Location</th>
+                  <td>San Luis Obispo</td>
+                </tr>
+                <tr>
+                  <th scope="row">Total volunteers needed</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Number on roster</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Number on waiting list</th>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+              <input name="harvesttemp" type="hidden" value="5284"/>
+              <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+            </form>
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="pop" id="pop52845">
             <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
               <tr>
-                <th rowspan="6" style="background-color:#ffffff; padding:10px;"><form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-                  <input name="harvesttemp" type="hidden" value="5284"/>
-                  <input type="submit" name="Submit2" id="Submit2" style="font-size:18px;height:70px; width:150px; background-color:#62E06F;white-space:normal;" onmouseover="style.fontWeight='bold'" onmouseout="style.fontWeight='normal'" value="Sign up for this event" />
-                </form></th>
+                <th rowspan="6" style="background-color:#ffffff; padding:10px;">
+                  <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                    <input name="harvesttemp" type="hidden" value="5284"/>
+                    <input type="submit" name="Submit2" id="Submit2" value="Sign up for this event" />
+                  </form>
+                </th>
                 <th>When</th>
                 <th>Crop or task</th>
                 <th>General<br />location</th>
               </tr>
               <tr>
                 <td>Thursday, Jan 9<br />7:30 PM</td>
-                <td>FARMERS MARKET</td>
+                <td>Farmer's Market</td>
                 <td>San Luis Obispo</td>
               </tr>
               <tr>
@@ -478,7 +541,7 @@ th {
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmer's Market!
                   Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
               </tr>
               <tr>
@@ -487,6 +550,8 @@ th {
                   You will see the harvest address after signing up.            </td>
               </tr>
             </table></div>
+
+
           <!-- end of pop -->
           <div class="pop" id="pop5280">
             <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
@@ -653,7 +718,7 @@ th {
               </tr>
               <tr>
                 <td>Thursday, Jan 16<br />7:30 PM</td>
-                <td>FARMERS MARKET</td>
+                <td>Farmer's Market</td>
                 <td>San Luis Obispo</td>
               </tr>
               <tr>
@@ -669,7 +734,7 @@ th {
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmer's Market!
                   Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
               </tr>
               <tr>
@@ -715,7 +780,9 @@ th {
                   Getting there:
                   You will see the harvest address after signing up.            </td>
               </tr>
-            </table></div>
+            </table>
+
+          </div>
           <!-- end of pop -->
           <div class="pop" id="pop5286">
             <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
@@ -730,7 +797,7 @@ th {
               </tr>
               <tr>
                 <td>Thursday, Jan 23<br />7:30 PM</td>
-                <td>FARMERS MARKET</td>
+                <td>Farmer's Market</td>
                 <td>San Luis Obispo</td>
               </tr>
               <tr>
@@ -746,7 +813,7 @@ th {
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmer's Market!
                   Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
               </tr>
               <tr>
@@ -754,7 +821,9 @@ th {
                   Getting there:
                   You will see the harvest address after signing up.            </td>
               </tr>
-            </table></div>
+            </table>
+          </div>
+
           <!-- end of pop -->
           <div class="pop" id="pop5287">
             <table width="820" cellpadding="3" cellspacing="0" id="harvestlist">
@@ -769,7 +838,7 @@ th {
               </tr>
               <tr>
                 <td>Thursday, Jan 30<br />7:30 PM</td>
-                <td>FARMERS MARKET</td>
+                <td>Farmer's Market</td>
                 <td>San Luis Obispo</td>
               </tr>
               <tr>
@@ -785,7 +854,7 @@ th {
                 <td>&nbsp;</td>
               </tr>
               <tr>
-                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                <td colspan = "4" class="leftjustify">This is a market collection in downtown SLO at the Thursday night Farmer's Market!
                   Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.  </td>
               </tr>
               <tr>
@@ -793,14 +862,10 @@ th {
                   Getting there:
                   You will see the harvest address after signing up.            </td>
               </tr>
-            </table></div>
-          <!-- end of pop -->
-        </div> <!-- end of popup div spacing shell----------------------------------------------- -->
+            </table>
           </div>
-        </div>
-      </div>
-    </div>
-</body>
+          <!-- end of pop -->
+
 
 
 
@@ -833,9 +898,6 @@ th {
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
-            <a href="#">Resources</a>
-          </li>
-          <li class="list-inline-item">
             <a href="administration.html">Administrative</a>
           </li>
         </ul>
@@ -861,27 +923,28 @@ th {
 <script src="js/agency.min.js"></script>
 
 <!---Calendar scripts --->
-<script type="text/javascript">
-var tempvar = null;
-function popup(show){
-	show.style.display="block"
-	if (tempvar && (tempvar !== show)) tempvar.style.display="none"
-	tempvar=show
-}
-function scrollWin() {
-if(window.pageYOffset<=470)
-{
-    setTimeout(function() {
-		window.scrollTo(0,window.pageYOffset+3);
-        scrollWin();
-    }, 5);
-   }
-}
-function lookdown(ele) { ele.innerHTML="Click to see details below"; }
-function lookup(ele,crop) { ele.innerHTML=crop; }
-</script>
 <script>
-function newDoc() {if(screen.width<801) window.location.assign("calendar-m.html");}
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>
+<script type="text/javascript">
+  function lookdown(ele) { ele.innerHTML="Click to see details!"; }
+  function lookup(ele,crop) { ele.innerHTML=crop; }
 </script>
 
 
