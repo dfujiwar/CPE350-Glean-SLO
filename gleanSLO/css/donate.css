@@ -332,16 +332,9 @@ header.masthead-donate .intro-text .intro-body {
         text-align: right justify;
         color: black;
         padding: 5% 10%;
-        //background: linear-gradient(#b877a0, #974077);
-        font-size: 15px
     }
 
 
-    @media (min-width: 768px) {
-        form.masthead {
-            font-size: 25px;
-        }
-    }
 
     img {
         background: url("images/your_image.jpg");
