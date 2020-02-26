@@ -208,7 +208,7 @@ header.masthead .home {
 header.masthead .volunteer {
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/volunteer/header-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/volunteer/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0% 75%;
