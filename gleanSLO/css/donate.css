@@ -215,13 +215,13 @@ header.masthead-donate {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
         header.masthead-donate .intro-text {
             text-shadow: 0px 0px 4px #000000;
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
             header.masthead-donate .intro-text .intro-lead-in {
@@ -242,6 +242,9 @@ header.masthead-donate .intro-text .intro-body {
 }
 
     @media (min-width: 768px) {
+        header.masthead-donate {
+            padding-top: 100px;
+        }
         header.masthead-donate .intro-text {
             padding-top: 300px;
             padding-bottom: 200px;
@@ -274,13 +277,13 @@ header.masthead-donate .intro-text .intro-body {
         background-attachment: scroll;
         background-position: center center;
         background-size: cover;
-        padding-top: 200px;
+        padding-top: 20px;
     }
 
         header.masthead-annual .intro-text {
             text-shadow: 0px 0px 4px #000000;
-            padding-top: 150px;
-            padding-bottom: 250px;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
             header.masthead-annual .intro-text .intro-lead-in {
@@ -300,6 +303,9 @@ header.masthead-donate .intro-text .intro-body {
             }
 
     @media (min-width: 768px) {
+        header.masthead-annual {
+            padding-top: 200px;
+        }
         header.masthead.masthead-annual .intro-text {
             padding-top: 300px;
             padding-bottom: 200px;
