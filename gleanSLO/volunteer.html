@@ -41,10 +41,10 @@
 
 /***************** calendar view harvest cells ****************/
 /** The entire calendar table**/
-#caltable {
-	border-collapse: collapse;
-	width: 56vw;
-	border: 0.2vw solid #545454;
+#caltable{
+    width: 70vw;
+    border-collapse: collapse;
+    border: 0.2vw solid #545454;
 }
 #caltable tr {
     vertical-align: top;
@@ -52,9 +52,11 @@
 #caltable tr td {
     overflow:auto;
 }
+
+
 /**** #calendar { width: 860px; height:3000px; overflow-y: auto; } ***/
 #cell {
-    width: 8vw;
+    width: 10vw;
 }
 #cell tr {
 	background-color: #DBFEFF;
@@ -68,12 +70,12 @@
     border:1px solid white;
     background-color:#545454;
     color:#ffffff;
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 td {
     text-align:center;
     border:1px solid black;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 /** Non-occupied calendar cells**/
 td {
@@ -84,7 +86,7 @@ td {
 th {
     border:0px;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2vw;
     background-color: #ededed;
     color: #000000;
     text-align:center;
@@ -134,6 +136,25 @@ th {
 .modal-content {
   width: 300vw;
 }
+
+@media (min-width: 768px) {
+  #caltable {
+    width: 63vw;
+  }
+  #cell {
+    width: 9vw;
+  }
+  #daysofweek th {
+    font-size: 1.5vw;
+  }
+  th {
+    font-size: 1.5vw;
+  }
+  td {
+    font-size: 1vw;
+  }
+}
+
 
 
 @charset 'utf-8';
@@ -197,9 +218,9 @@ th {
       <div id="mainContent" >
         <h2 class="section-heading text-uppercase  text-center">Harvests and Other Events</h2>
         <div id="calendar">
-          <p>Before signing up for an event, please be sure that you and each person signing up has registered previously on the <a href="register.html" title="Harvester registration">Registration</a> page. If you have already registered as a volunteer you do not have to do so again. Each adult must sign up separately  for events. To sign up for an event, click on the 'Sign up for this event'  button. Once you sign up, you will receive a confirmation letter with the exact  address and detailed information about the event. If the roster is full, your name will be  added to a waiting list and you will receive an email if anyone ahead of you  cancels their spot.</p>
-          <p>Move the mouse over harvests on the calendar to see details and a sign up link below the calendar. Green harvests have roster openings left; yellow harvests have a waiting list. <strong>If you are using a smart phone you may have to scroll the top half of the page to see everything.</strong></p>
-          <p>&nbsp;</p>
+            <p>Before signing up for an event, please be sure that you and each person signing up has registered previously on the <a href="register.html" title="Harvester registration">Registration</a> page. If you have already registered as a volunteer you do not have to do so again. Each adult must sign up separately  for events. To sign up for an event, click on the 'Sign up for this event'  button. Once you sign up, you will receive a confirmation letter with the exact  address and detailed information about the event. If the roster is full, your name will be  added to a waiting list and you will receive an email if anyone ahead of you  cancels their spot.</p>
+            <p>Move the mouse over harvests on the calendar to see details and a sign up link below the calendar. Green harvests have roster openings left; yellow harvests have a waiting list. <strong>If you are using a smart phone you may have to scroll the top half of the page to see everything.</strong></p>
+            <p>&nbsp;</p>
           <div class="table-responsive">
             <table id="caltable" align="center" class="table">
               <thead>

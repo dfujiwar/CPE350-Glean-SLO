@@ -767,20 +767,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 #register .container{
     padding-top: 5vw;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     #register .container{
         padding-top: 5vw;
-    }
-}
-
-#calendar p {
-    font-size: 2.5vw;
-}
-#register p{
-    font-size: 2.5vw;
-}
-@media (min-width: 576px) {
-    #calendar p {
-        font-size: 1.2vw;
     }
 }
