@@ -63,7 +63,7 @@
                         <a class="nav-link js-scroll-trigger" href="volunteer.html">Volunteer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -87,259 +87,288 @@
     </header>
 
     <section class="bg-light page-section" id="site_reg">
-        <form class="masthead" action="/site_registration.php?" id="site_reg" name="site_reg" method="post" onsubmit="return validateForm()">
-            <div class=" text-center" style="padding-bottom: 50px;">
-                <h1>CROP DONATION FORM</h1>
-                <p class="text-muted" style=" font-size: 15px" >
-                    Thanks for thinking of GleanSLO and sharing your food with those in need! Please note that
-                    GleanSLO is a small volunteer-powered organization with limited staff-time and harvesting resources-
-                    therefore unable to guarntee that we will be able to schedule a harvest with you, especially during busy seasons
-                    where we mush prioritize properties with larger quantities of produce. See below for other options if GleanSLO
-                    is unable to schedule a harvest with you. Also note that for those harvests we are unable to schedule, our equipment
-                    is limited and volunteers have limited abilities, so we connot guarantee that we will be able to harvest
-                    all the fruit you have to offer, but we will try our best! Thank you for being part of the gleaning movement and sharing with our community.
-                </p>
-                <p class="text-muted" style=" font-size: 15px">
-                    Have you donated to GleanSLO in the past but want to let us know your crop is ready to pick this season? You may already be registered!
-                    Please contact Program Coordinator Emily Wilson, ewilson@slofoodbank.org or (805)235-1180, to arrange a glean.
-                </p>
-                <p class="text-muted" style=" font-size: 15px">
-                    All harvest participants will be trained in proper harvesting methods and sign waivers of liability that protect the crop owner
-                    as well as GleanSLO.
-                </p>
-                <p class="text-muted" style=" font-size: 15px">
-                    Privacy: Information entered here is used soley by GleanSLO and will not be available to the public. We do not share, sell or otherwise
-                    distribute personal information.
-                </p>
-                <p class="text-muted" style=" font-size: 15px"> If you have questions, please contact us at gleanslo@slofoodbank.org</p>
-            </div>
+        
+        <div class="container" style=" color: black">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-uppercase  text-center">CROP DONATION FORM</h2>
+                    <p>
+                        Thanks for thinking of GleanSLO and sharing your food with those in need! Please note that
+                        GleanSLO is a small volunteer-powered organization with limited staff-time and harvesting resources-
+                        therefore unable to guarntee that we will be able to schedule a harvest with you, especially during busy seasons
+                        where we mush prioritize properties with larger quantities of produce. See below for other options if GleanSLO
+                        is unable to schedule a harvest with you. Also note that for those harvests we are unable to schedule, our equipment
+                        is limited and volunteers have limited abilities, so we connot guarantee that we will be able to harvest
+                        all the fruit you have to offer, but we will try our best! Thank you for being part of the gleaning movement and sharing with our community.
+                        <strong>
+                            Have you donated to GleanSLO in the past but want to let us know your crop is ready to pick this season? You may already be registered!
+                            Please contact Program Coordinator Emily Wilson, ewilson@slofoodbank.org or (805)235-1180, to arrange a glean.
+                        </strong>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>
-                        Farm name or owner's last name
-                        <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
-                    </label>
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label>
-                        Contact person's name
-                        <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
-                    </label>
+                        <p></p><strong>
+                            All harvest participants will be trained in proper harvesting methods and sign waivers of liability that protect the crop owner
+                            as well as GleanSLO.Privacy: Information entered here is used soley by GleanSLO and will not be available to the public. We do not share, sell or otherwise
+                            distribute personal information.
+                        </strong>
+                        <p></p><strong>
+                            If you have questions, please contact us at <a href="mailto:gleanslo@slofoodbank.org">gleanslo@slofoodbank.org</a>
+                        </strong>
+                    </p>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>
-                        Phone number
-                        <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" />
-                    </label>
-                </div>
-                <div class="form-group col-md-6">
-                    <label>
-                        Alternate phone number
-                        <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" />
-                    </label>
-                </div>
             </div>
-            <div class="form-group col-md-6">
-                <label>
-                    Email address
-                    <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
-                </label>
-            </div>
-            <div>
-                <label>
-                    How best to reach me:
-                    <div style="margin-left:25px">
-                        <input name="howbest[]" type="checkbox" value="phone" /> Phone<br />
-                        <input name="howbest[]" type="checkbox" value="email" /> Email<br />
-                        <input name="howbest[]" type="checkbox" value="text" /> Text message<br />
-                        <input name="howbest[]" type="text" value="" maxlength="30" size="15" class="form-control" /> Other
+            <!--<div class=" text-center" style="padding-bottom: 50px;">
+        <h1>CROP DONATION FORM</h1>
+        <p class="text-muted" style=" font-size: 15px">
+            Thanks for thinking of GleanSLO and sharing your food with those in need! Please note that
+            GleanSLO is a small volunteer-powered organization with limited staff-time and harvesting resources-
+            therefore unable to guarntee that we will be able to schedule a harvest with you, especially during busy seasons
+            where we mush prioritize properties with larger quantities of produce. See below for other options if GleanSLO
+            is unable to schedule a harvest with you. Also note that for those harvests we are unable to schedule, our equipment
+            is limited and volunteers have limited abilities, so we connot guarantee that we will be able to harvest
+            all the fruit you have to offer, but we will try our best! Thank you for being part of the gleaning movement and sharing with our community.
+        </p>
+        <p class="text-muted" style=" font-size: 15px">
+            Have you donated to GleanSLO in the past but want to let us know your crop is ready to pick this season? You may already be registered!
+            Please contact Program Coordinator Emily Wilson, ewilson@slofoodbank.org or (805)235-1180, to arrange a glean.
+        </p>
+        <p class="text-muted" style=" font-size: 15px">
+            All harvest participants will be trained in proper harvesting methods and sign waivers of liability that protect the crop owner
+            as well as GleanSLO.
+        </p>
+        <p class="text-muted" style=" font-size: 15px">
+            Privacy: Information entered here is used soley by GleanSLO and will not be available to the public. We do not share, sell or otherwise
+            distribute personal information.
+        </p>
+        <p class="text-muted" style=" font-size: 15px"> If you have questions, please contact us at gleanslo@slofoodbank.org</p>
+    </div>-->
+            <form class="masthead" action="/site_registration.php?" id="site_reg" name="site_reg" method="post" onsubmit="return validateForm()">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>
+                            Farm name or owner's last name
+                            <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
+                        </label>
                     </div>
-                </label>
-            </div>
-            <div class="form-group col-md-6">
-                <label>
-                    Address of the crop
-                    <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
-                </label>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-2">
-                    <label>City <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>State <input name="state" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>Zip <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
-                </div>
-            </div>
-            <div class="form-group col-md-6">
-                <label>
-                    Mailing address (if different from crop address)
-                    <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
-                </label>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-2">
-                    <label>City <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>State <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
-                </div>
-                <div class="form-group col-md-2">
-                    <label>Zip <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
-                </div>
-            </div>
 
-            <label>What is your relationship to this property?</label>
-            <p id="indent">
-                <label>
-                    <input name="property_rel" type="radio" id="property_rel_0" value="owner" checked="checked" />
-                    Owner and occupant
-                </label>
-                <br />
-                <label>
-                    <input type="radio" name="property_rel" value="landlord" id="property_rel_1" />
-                    Rental property (landlord)
-                </label>
-                <br />
-                <label>
-                    <input type="radio" name="property_rel" value="renter" id="property_rel_2" />
-                    Renter
-                </label>
-                <br />
-                <label>
-                    <input type="radio" name="property_rel" value="other" id="property_rel_3" />
-                    Other
-                </label>
-                <br />
-                <label>
-                    Landlord contact information (if applicable)
-                    <input type="text" name="landlord" size="40" id="landlord" value="" class="form-control"  />
-                </label>
-            </p>
-            <p>
-                <label>
-                    What type of site?
-                    <select name="venue">
-                        <option value=" " selected="selected">[select]</option>
-                        <option value="Backyard">Backyard</option>
-                        <option value="Farm">Commercial farm</option>
-                        <option value="Drive">Fruit drive</option>
-                        <option value="Pickup">Small amount to pick up</option>
-                        <option value="Market">Market</option>
-                        <option value="Event">Event</option>
+                    <div class="form-group col-md-6">
+                        <label>
+                            Contact person's name
+                            <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>
+                            Phone number
+                            <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+                        </label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>
+                            Alternate phone number
+                            <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Email address
+                        <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        How best to reach me:
+                        <div style="margin-left:25px">
+                            <input name="howbest[]" type="checkbox" value="phone" /> Phone<br />
+                            <input name="howbest[]" type="checkbox" value="email" /> Email<br />
+                            <input name="howbest[]" type="checkbox" value="text" /> Text message<br />
+                            <input name="howbest[]" type="text" value="" maxlength="30" size="15" class="form-control" /> Other
+                        </div>
+                    </label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Address of the crop
+                        <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
+                    </label>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label>City <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>State <input name="state" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>Zip <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Mailing address (if different from crop address)
+                        <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
+                    </label>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label>City <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>State <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>Zip <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
+                    </div>
+                </div>
+
+                <label>What is your relationship to this property?</label>
+                <p id="indent">
+                    <label>
+                        <input name="property_rel" type="radio" id="property_rel_0" value="owner" checked="checked" />
+                        Owner and occupant
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="property_rel" value="landlord" id="property_rel_1" />
+                        Rental property (landlord)
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="property_rel" value="renter" id="property_rel_2" />
+                        Renter
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="property_rel" value="other" id="property_rel_3" />
+                        Other
+                    </label>
+                    <br />
+                    <label>
+                        Landlord contact information (if applicable)
+                        <input type="text" name="landlord" size="40" id="landlord" value="" class="form-control" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        What type of site?
+                        <select name="venue">
+                            <option value=" " selected="selected">[select]</option>
+                            <option value="Backyard">Backyard</option>
+                            <option value="Farm">Commercial farm</option>
+                            <option value="Drive">Fruit drive</option>
+                            <option value="Pickup">Small amount to pick up</option>
+                            <option value="Market">Market</option>
+                            <option value="Event">Event</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        What type(s) of produce?
+                        <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control" />
+                    </label>
+                    <br />
+                    Currently, as a program of the SLO Food Bank, GleanSLO  harvests according to storage and distribution capacity of the food bank and  its partner agencies. <strong>We do not currently harvest loquats, wine grapes, olives, or  any type of nuts</strong>&nbsp;due to either very short shelf life, need for  processing, lack of demand, or potential allergy issues.
+                </p>
+                <p>
+                    How much (for instance '2 trees' or '3 acres' or '300 pounds')
+                    <input name="size" type="text" id="size" value="" size="30" maxlength="30" class="form-control" />
+                </p>
+                <p>
+                    Location of plants on the property
+                    <input name="location" type="text" id="location" size="30" value="" maxlength="20" class="form-control" />
+                <p>
+                    Crop height (feet)
+                    <input name="height" type="text" id="height" size="5" value="" maxlength="10" class="form-control" />
+                <p>
+                    Lowest produce height (feet)
+                    <input name="lowest" type="text" id="lowest" size="5" value="" maxlength="10" class="form-control" />
+                </p>
+                <p>Does the crop have any fungus, disease or pest issues?</p>
+                <p id="indent">
+                    <label><input name="disease" type="radio" id="disease_0" value="No" checked="checked" /> No</label>&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="disease" value="Yes" id="disease_1" /> Yes </label><br />
+                    <label>
+                        Describe <input name="disease_text" type="text" id="disease_text" value="" size="25" maxlength="25" class="form-control" />
+                    </label>
+                </p>
+                <p>
+                    Which chemicals or supplements, if any, are used on or around the crop area that GleanSLO's more sensitive or iimmuno-suppressed volunteers should be aware of?<br />
+                    <input name="spray_text" type="text" id="spray_text" value="" size="80" maxlength="100" class="form-control" />
+                </p>
+                <p>
+                    What time of year is the crop usually ripe?
+                    <select name="month_ripe" id="when_ripe">
+                        <option value="01" selected="selected">[month]</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
-                </label>
-            </p>
-            <p>
-                <label>
-                    What type(s) of produce?
-                    <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control"  />
-                </label>
-                <br />
-                Currently, as a program of the SLO Food Bank, GleanSLO  harvests according to storage and distribution capacity of the food bank and  its partner agencies. <strong>We do not currently harvest loquats, wine grapes, olives, or  any type of nuts</strong>&nbsp;due to either very short shelf life, need for  processing, lack of demand, or potential allergy issues.
-            </p>
-            <p>
-                How much (for instance '2 trees' or '3 acres' or '300 pounds')
-                <input name="size" type="text" id="size" value="" size="30" maxlength="30" class="form-control"  />
-            </p>
-            <p>
-                Location of plants on the property
-                <input name="location" type="text" id="location" size="30" value="" maxlength="20" class="form-control"  />
-            <p>
-                Crop height (feet)
-                <input name="height" type="text" id="height" size="5" value="" maxlength="10" class="form-control"  />
-            <p>
-                Lowest produce height (feet)
-                <input name="lowest" type="text" id="lowest" size="5" value="" maxlength="10" class="form-control"  />
-            </p>
-            <p>Does the crop have any fungus, disease or pest issues?</p>
-            <p id="indent">
-                <label><input name="disease" type="radio" id="disease_0" value="No" checked="checked" /> No</label>&nbsp;&nbsp;&nbsp;
-                <label><input type="radio" name="disease" value="Yes" id="disease_1" /> Yes </label><br />
-                <label>
-                    Describe <input name="disease_text" type="text" id="disease_text" value="" size="25" maxlength="25" class="form-control"  />
-                </label>
-            </p>
-            <p>
-                Which chemicals or supplements, if any, are used on or around the crop area that GleanSLO's more sensitive or iimmuno-suppressed volunteers should be aware of?<br />
-                <input name="spray_text" type="text" id="spray_text" value="" size="80" maxlength="100" class="form-control"  />
-            </p>
-            <p>
-                What time of year is the crop usually ripe?
-                <select name="month_ripe" id="when_ripe">
-                    <option value="01" selected="selected">[month]</option>
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <select name="week_ripe" id="when_ripe">
-                    <option value="01" selected="selected">[week]</option>
-                    <option value="03">first week</option>
-                    <option value="10">second week</option>
-                    <option value="17">third week</option>
-                    <option value="24">fourth week</option>
-                </select>
-            </p>
-            <p>Is there anything else you would like us to know (condition of the produce, access to the crops, preferred ways and times to contact you )?</p>
-            <p>
-                <label>
-                    <textarea name="otherinfo" cols="80" rows="3" class="form-control" /></textarea>
-                </label>
-            </p>
-            <p>I would like my donation to be acknowledged:</p>
-            <p id="indent">
-                <label>
-                    <input name="recog" type="radio" value="Yes" checked="checked" /> Yes
-                </label>&nbsp;&nbsp;&nbsp;
-                <label><input type="radio" name="recog" value="No" /> No </label><br />
-                <label>
-                    Acknowledge my donation as coming from: <input name="recog_text" type="text" value="" size="40" maxlength="60" class="form-control" />
-                </label>
-            </p>
-            <p>
-                <label>
-                    How did you hear about GleanSLO?
-                    <select name="howhear" id="howhear">
-                        <option value=" " selected="selected">[select]</option>
-                        <option value="Neighbor">Neighbor</option>
-                        <option value="GleanSLO web site">GleanSLO Web Site</option>
-                        <option value="SLO Food Bank">SLO Food Bank</option>
-                        <option value="GleanSLO volunteer">GleanSLO volunteer</option>
-                        <option value="Newspaper">Newspaper</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Flyer">Flyer</option>
-                        <option value="Craigslist">Craigslist</option>
-                        <option value="Other urban harvesting group">Other urban harvesting group</option>
-                        <option value="Friend">Friend</option>
-                        <option value="Other">Other</option>
-                        <option value="Web search">Web search</option>
+                    <select name="week_ripe" id="when_ripe">
+                        <option value="01" selected="selected">[week]</option>
+                        <option value="03">first week</option>
+                        <option value="10">second week</option>
+                        <option value="17">third week</option>
+                        <option value="24">fourth week</option>
                     </select>
-                </label>
-            </p>
-            <div class="g-recaptcha" data-sitekey="6LfTB0sUAAAAABJ1NkgZTZH0JYEMrdGDKqqy9kT3"> </div><!-- This key is attached to the dyates@gleanweb.org Google account -->
-            <p>
-                <label>
-                    <input class="button" style="font-weight:bold;" type="submit" name="submit" id="submit" value="Save" />
-                </label>
-                <input type="hidden" name="MM_insert" value="site_reg" />
-            </p>
-        </form>
-    </section>
+                </p>
+                <p>Is there anything else you would like us to know (condition of the produce, access to the crops, preferred ways and times to contact you )?</p>
+                <p>
+                    <label>
+                        <textarea name="otherinfo" cols="80" rows="3" class="form-control" /></textarea>
+                    </label>
+                </p>
+                <p>I would like my donation to be acknowledged:</p>
+                <p id="indent">
+                    <label>
+                        <input name="recog" type="radio" value="Yes" checked="checked" /> Yes
+                    </label>&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="recog" value="No" /> No </label><br />
+                    <label>
+                        Acknowledge my donation as coming from: <input name="recog_text" type="text" value="" size="40" maxlength="60" class="form-control" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        How did you hear about GleanSLO?
+                        <select name="howhear" id="howhear">
+                            <option value=" " selected="selected">[select]</option>
+                            <option value="Neighbor">Neighbor</option>
+                            <option value="GleanSLO web site">GleanSLO Web Site</option>
+                            <option value="SLO Food Bank">SLO Food Bank</option>
+                            <option value="GleanSLO volunteer">GleanSLO volunteer</option>
+                            <option value="Newspaper">Newspaper</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Flyer">Flyer</option>
+                            <option value="Craigslist">Craigslist</option>
+                            <option value="Other urban harvesting group">Other urban harvesting group</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Other">Other</option>
+                            <option value="Web search">Web search</option>
+                        </select>
+                    </label>
+                </p>
+                <div class="g-recaptcha" data-sitekey="6LfTB0sUAAAAABJ1NkgZTZH0JYEMrdGDKqqy9kT3"> </div><!-- This key is attached to the dyates@gleanweb.org Google account -->
+                <p>
+                    <label>
+                        <input class="button" style="font-weight:bold;" type="submit" name="submit" id="submit" value="Save" />
+                    </label>
+                    <input type="hidden" name="MM_insert" value="site_reg" />
+                </p>
+            </form>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
