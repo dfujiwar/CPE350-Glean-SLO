@@ -147,82 +147,94 @@
                     <div class="form-group col-md-6">
                         <label>
                             Farm name or owner's last name
-                            <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
                         </label>
+                            <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
+                        
                     </div>
 
                     <div class="form-group col-md-6">
                         <label>
                             Contact person's name
-                            <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
                         </label>
+                            <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
+                        
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>
                             Phone number
-                            <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
                         </label>
+                            <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+                        
                     </div>
                     <div class="form-group col-md-6">
                         <label>
                             Alternate phone number
-                            <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
                         </label>
+                            <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+                        
                     </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label>
-                        Email address
-                        <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
-                    </label>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>
+                            Email address
+                        </label>
+                            <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
+                        
+                    </div>
                 </div>
-                <div>
+                <div class="form-row">
                     <label>
                         How best to reach me:
+                    </label>
                         <div style="margin-left:25px">
                             <input name="howbest[]" type="checkbox" value="phone" /> Phone<br />
                             <input name="howbest[]" type="checkbox" value="email" /> Email<br />
                             <input name="howbest[]" type="checkbox" value="text" /> Text message<br />
                             <input name="howbest[]" type="text" value="" maxlength="30" size="15" class="form-control" /> Other
                         </div>
-                    </label>
+                    
                 </div>
+                <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>
                         Address of the crop
-                        <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
                     </label>
+                        <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
+                   
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <label>City <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
+                        <label>City</label> <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" />
                     </div>
                     <div class="form-group col-md-2">
-                        <label>State <input name="state" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
+                        <label>State </label><input name="state" type="text" value="" size="2" maxlength="2" class="form-control" />
                     </div>
                     <div class="form-group col-md-2">
-                        <label>Zip <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
+                        <label>Zip</label> <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>
                         Mailing address (if different from crop address)
-                        <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
                     </label>
+                        <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
+                   
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <label>City <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" /></label>
+                        <label>City </label> <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" />
                     </div>
                     <div class="form-group col-md-2">
-                        <label>State <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" /></label>
+                        <label>State </label> <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" />
                     </div>
                     <div class="form-group col-md-2">
-                        <label>Zip <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" /></label>
+                        <label>Zip </label> <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" />
                     </div>
                 </div>
+                    </div>
 
                 <label>What is your relationship to this property?</label>
                 <p id="indent">
@@ -268,8 +280,9 @@
                 <p>
                     <label>
                         What type(s) of produce?
-                        <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control" />
                     </label>
+                        <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control" />
+                   
                     <br />
                     Currently, as a program of the SLO Food Bank, GleanSLO  harvests according to storage and distribution capacity of the food bank and  its partner agencies. <strong>We do not currently harvest loquats, wine grapes, olives, or  any type of nuts</strong>&nbsp;due to either very short shelf life, need for  processing, lack of demand, or potential allergy issues.
                 </p>
