@@ -78,7 +78,7 @@
         </p>
       </div>
     </div>
-
+    <hr class="divider my-4">
     <form class="needs-validation" action="http://www.gleanslo.org/pickerinsert.php?" id="pickerinsertform" name="pickerinsertform" method="POST" novalidate>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -190,7 +190,7 @@
         <div class="form-group col-md-6">
           <label for="how_hear">How did you hear about GleanSLO?</label>
           <select class="form-control" id="how_hear" required>
-            <option value=" " selected="selected">[select]</option>
+            <option value=" " selected="selected">Please choose one.</option>
             <option value="Neighbor">Neighbor</option>
             <option value="GleanSLO web site">GleanSLO Web Site</option>
             <option value="SLO Food Bank">SLO Food Bank</option>
@@ -222,15 +222,16 @@
       </div>
       <button type="submit" class="btn btn-primary" name="submit" id="submit" value="Save">Submit</button>
       <input type="hidden" name="MM_insert" value="pickerinsertform" />
+      <div class="row">
+        <div class="col-lg-12">
+          <p></p>Privacy: Information entered here is used solely by  GleanSLO. We do not share, sell, or
+          distribute  your personal information.
+        </div>
+      </div>
     </form>
 
 
-    <div class="row">
-      <div class="col-lg-12">
-        <p></p>Privacy: Information entered here is used solely by  GleanSLO. We do not share, sell, or
-        distribute  your personal information.
-      </div>
-    </div>
+
 
   </div>
 </section>
@@ -240,7 +241,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4">
-        <span class="copyright">Copyright &copy; GleanSLO</span>
+        <span class="copyright">Copyright &copy; GleanSLO 2020</span>
       </div>
       <div class="col-md-4">
         <ul class="list-inline social-buttons">
@@ -263,9 +264,6 @@
       </div>
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="#">Resources</a>
-          </li>
           <li class="list-inline-item">
             <a href="administration.html">Administrative</a>
           </li>

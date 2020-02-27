@@ -7,6 +7,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  text-align: justify;      /* Added */
 }
 
 p {
@@ -197,7 +198,7 @@ img::-moz-selection {
 header.masthead .home {
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/homebg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/homebg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0% 25%;
@@ -227,6 +228,30 @@ header.masthead .steering {
   position:relative;
 }
 
+header.masthead .donation{
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0% 28%;
+  background-size: cover;
+  position:relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/donate/donate.jpg");
+}
+
+header.masthead .annual{
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0% 28%;
+  background-size: cover;
+  position:relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/AnnualReports/header-3.jpg");
+}
+
+
+
 header.masthead .intro-text {
   padding-top: 25vw;
   padding-bottom: 15vw;
@@ -254,12 +279,16 @@ header.masthead .intro-text .intro-lead-in {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-header.masthead .volunteer .intro-text .intro-text-main {
+header.masthead .intro-text .intro-text-main {
   font-size: 5vw;
+  font-weight; 700;
   line-height: 5vw;
   margin-top: 4vw;
   margin-bottom: 4vw;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+header.masthead .donation .btn-primary{
+    width: 50%
 }
 
 @media (min-width: 768px) {
@@ -286,12 +315,19 @@ header.masthead .volunteer .intro-text .intro-text-main {
     margin-bottom: 25px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
-  header.masthead .volunteer .intro-text .intro-text-main {
+  header.masthead .intro-text .intro-text-main {
     font-size: 2.5vw;
+    font-weight: 700;
     line-height: 3vw;
     margin-top: 2vw;
     margin-bottom: 2vw;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+  header.masthead .donation .btn-primary {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
   }
 }
 
@@ -767,4 +803,26 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     #register .container{
         padding-top: 5vw;
     }
+}
+
+#site_reg .container{
+}
+form {
+    padding-left:10%;
+    padding-right: 10%;
+    position: relative;
+}
+@media (min-width: 768px) {
+    form {
+        padding-left:10%;
+        padding-right: 10%;
+        position: relative;
+    }
+}
+
+.timeline-panel h6{
+    font-weight:200;
+}
+.timeline-panel strong{
+    font-weight: 700;
 }

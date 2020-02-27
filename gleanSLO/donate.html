@@ -22,23 +22,14 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/donate.css" rel="stylesheet">
+   <!-- <link href="css/donate.css" rel="stylesheet">--> <!-- I took this away and added it back to the agency to get same styling-->
     <link href="css/agency.css" rel="stylesheet">
 
 
-    <script type="text/javascript">
-        function setFocus() { document.getElementById('farm').focus();}
-        function validateForm() {
-        var x = document.forms["site_reg"]["contact1"].value;
-        if (x=="" || x==null) { alert("Please enter the name of whom we can contact."); return false; }
-        var x = document.forms["site_reg"]["phone1"].value;
-        if (x=="" || x==null) { alert("Please enter a telephone number."); return false; }
-        }
-    </script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
-<header id="page-top">
+<body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -63,32 +54,47 @@
                         <a class="nav-link js-scroll-trigger" href="volunteer.html">Volunteer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
+
     <!-- Header -->
-    <header class="masthead-donate">
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in text-uppercase font-weight-bold">Make a financial donation</div>
-                <div class="intro-body">Financial donations to the GleanSlo Program allow us to follow through in our mission of rescuing food that would otherwise be wasted and distributing that food to those in need throughout SLO county. See more about how GSLO works below.</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://donate.slofoodbank.org/campaigns/10230-gleanslo">Financial donation</a>
-                <div class="intro-lead-in text-uppercase font-weight-bold"> Donate your food crops</div>
-                <div class="intro-body"> GleanSLO relies on the generosity of homeowners and farmers with extra produce to participate in out program and make use of food crops would otherwise be wasted</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#site_reg">
-                    <i class="fas fa-arrow-down"></i>
-                </a>
+    <header class="masthead">
+        <div class="donation">
+            <div class="container">
+                <div class="intro-text">
+                    <!--<div class="intro-lead-in text-uppercase font-weight-bold">Make a financial donation</div>
+                    <div class="intro-body">Financial donations to the GleanSLO Program allow us to follow through in
+                    our mission of rescuing food that would otherwise be wasted and distributing that food to those in
+                    need throughout SLO county. See more about how GSLO works below.</div>-->
+
+                    <div class="intro-text-main text-uppercase">Help us follow through with our mission of rescuing nature's
+                        bounty for the benefit of our community by:</div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3 pt-3">
+                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://donate.slofoodbank.org/campaigns/10230-gleanslo">Making a Financial Donation</a>
+                        </div>
+                        <!--<div class="intro-lead-in text-uppercase font-weight-bold"> Donate your food crops</div>
+                        <div class="intro-body"> GleanSLO relies on the generosity of homeowners and farmers with extra produce
+                        to participate in out program and make use of food crops would otherwise be wasted</div>-->
+                        <div class="col-md-3 pt-3">
+                        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#site_reg"> Making a Crop Donation!
+                            <!--<i class="fas fa-arrow-down"></i>-->
+                        </a></div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <section class="bg-light page-section" id="site_reg">
         
-        <div class="container" style=" color: black">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="section-heading text-uppercase  text-center">CROP DONATION FORM</h2>
@@ -116,7 +122,6 @@
                     </p>
                 </div>
             </div>
-            </div>
             <!--<div class=" text-center" style="padding-bottom: 50px;">
         <h1>CROP DONATION FORM</h1>
         <p class="text-muted" style=" font-size: 15px">
@@ -142,132 +147,122 @@
         </p>
         <p class="text-muted" style=" font-size: 15px"> If you have questions, please contact us at gleanslo@slofoodbank.org</p>
     </div>-->
-            <form class="masthead" action="/site_registration.php?" id="site_reg" name="site_reg" method="post" onsubmit="return validateForm()">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>
-                            Farm name or owner's last name
-                        </label>
-                            <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
-                        
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label>
-                            Contact person's name
-                        </label>
-                            <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
-                        
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>
-                            Phone number
-                        </label>
-                            <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
-                        
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label>
-                            Alternate phone number
-                        </label>
-                            <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
-                        
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>
-                            Email address
-                        </label>
-                            <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
-                        
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label>
-                        How best to reach me:
-                    </label>
-                        <div style="margin-left:25px">
-                            <input name="howbest[]" type="checkbox" value="phone" /> Phone<br />
-                            <input name="howbest[]" type="checkbox" value="email" /> Email<br />
-                            <input name="howbest[]" type="checkbox" value="text" /> Text message<br />
-                            <input name="howbest[]" type="text" value="" maxlength="30" size="15" class="form-control" /> Other
-                        </div>
-                    
-                </div>
-                <div class="form-row">
+        <hr class="divider my-4">
+        <form class="masthead" action="/site_registration.php?" id="site_reg" name="site_reg" method="post" onsubmit="return validateForm()">
+            <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label>
-                        Address of the crop
-                    </label>
-                        <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
-                   
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label>City</label> <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" />
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>State </label><input name="state" type="text" value="" size="2" maxlength="2" class="form-control" />
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Zip</label> <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" />
-                    </div>
+                    <label>Farm Name or Owner's Last Name</label>
+                    <input name="farm" id="farm" type="text" value="" size="40" maxlength="60" class="form-control" />
                 </div>
                 <div class="form-group col-md-6">
-                    <label>
-                        Mailing address (if different from crop address)
-                    </label>
-                        <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
-                   
+                    <label>Contact's name</label>
+                    <input name="contact1" type="text" value="" size="40" maxlength="80" class="form-control" />
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label>City </label> <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" />
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>State </label> <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" />
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Zip </label> <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" />
-                    </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Phone Number</label>
+                    <input name="phone1" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+
                 </div>
+                <div class="form-group col-md-6">
+                    <label>Alternate Phone Number</label>
+                    <input name="phone2" type="text" value="" size="20" maxlength="50" class="form-control" placeholder="(000) 000-0000" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label>Email Address</label>
+                    <input name="email1" type="text" value="" size="40" maxlength="60" class="form-control" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label>How would you like to be contacted?</label>
+                <div class="form-group col-md-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="howbest[]" type="checkbox" value="phone" />
+                        <label class="form-check-label">Phone</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="howbest[]" type="checkbox" value="email" />
+                        <label class="form-check-label">Email</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="howbest[]" type="checkbox" value="text" />
+                        <label class="form-check-label">Text message</label>
                     </div>
 
-                <label>What is your relationship to this property?</label>
-                <p id="indent">
-                    <label>
-                        <input name="property_rel" type="radio" id="property_rel_0" value="owner" checked="checked" />
-                        Owner and occupant
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="property_rel" value="landlord" id="property_rel_1" />
-                        Rental property (landlord)
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="property_rel" value="renter" id="property_rel_2" />
-                        Renter
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="property_rel" value="other" id="property_rel_3" />
-                        Other
-                    </label>
-                    <br />
-                    <label>
-                        Landlord contact information (if applicable)
-                        <input type="text" name="landlord" size="40" id="landlord" value="" class="form-control" />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        What type of site?
-                        <select name="venue">
-                            <option value=" " selected="selected">[select]</option>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label pr-2">Other:</label>
+                        <input class="form-check-input" name="howbest[]" type="text" value="" maxlength="30" size="15" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Address of the Crop</label>
+                    <input name="address" type="text" value="" size="50" maxlength="80" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>City</label>
+                    <input name="city" type="text" value="" size="30" maxlength="30" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>State </label>
+                    <input name="state" type="text" value="" size="2" maxlength="2" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Zip Code</label>
+                    <input name="zip" type="text" value="" size="5" maxlength="5" class="form-control" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Mailing Address (if different from crop address)</label>
+                    <input name="maddress" type="text" value="" size="60" maxlength="80" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>City </label>
+                    <input name="mcity" type="text" value="" size="30" maxlength="30" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>State </label>
+                    <input name="mstate" type="text" value="" size="2" maxlength="2" class="form-control" />
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Zip Code</label>
+                    <input name="mzip" type="text" value="" size="5" maxlength="5" class="form-control" />
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="relationship">What is your relationship to this property?</label>
+                <div class="form-group col-md-12">
+                    <div class="form-check form-check-inline" id="relationship">
+                        <input class="form-check-input" name="property_rel" type="radio" id="property_rel_0" value="owner" checked="checked" />
+                        <label class="form-check-label">Owner and occupant</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="property_rel" value="landlord" id="property_rel_1" />
+                        <label class="form-check-label">Rental property (landlord)</label>
+                    </div>
+                    <div class="form-check form-check-inline" >
+                        <input class="form-check-input" type="radio" name="property_rel" value="renter" id="property_rel_2" />
+                        <label class="form-check-label">Renter</label>
+                    </div>
+                    <div class="form-check form-check-inline" >
+                        <input class="form-check-input" type="radio" name="property_rel" value="other" id="property_rel_3" />
+                        <label class="form-check-label">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>What type of site?</label>
+                        <select class="form-control" name="venue">
+                            <option value=" " selected="selected">Please choose one.</option>
                             <option value="Backyard">Backyard</option>
                             <option value="Farm">Commercial farm</option>
                             <option value="Drive">Fruit drive</option>
@@ -275,47 +270,49 @@
                             <option value="Market">Market</option>
                             <option value="Event">Event</option>
                         </select>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        What type(s) of produce?
-                    </label>
-                        <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control" />
-                   
-                    <br />
-                    Currently, as a program of the SLO Food Bank, GleanSLO  harvests according to storage and distribution capacity of the food bank and  its partner agencies. <strong>We do not currently harvest loquats, wine grapes, olives, or  any type of nuts</strong>&nbsp;due to either very short shelf life, need for  processing, lack of demand, or potential allergy issues.
-                </p>
-                <p>
-                    How much (for instance '2 trees' or '3 acres' or '300 pounds')
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>What type(s) of produce?</label>
+                    <input name="crops" type="text" id="crops" value="" size="100" maxlength="150" class="form-control" />
+                    <small id="passwordHelp" class="form-text">Currently, as a program of the SLO Food Bank, GleanSLO
+                        harvests according to storage and distribution capacity of the food bank and  its partner agencies.
+                        <strong>We do not currently harvest loquats, wine grapes, olives, or  any type of nuts</strong>&nbsp;due to
+                        either very short shelf life, need for  processing, lack of demand, or potential allergy issues.</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Crop Amount</label>
                     <input name="size" type="text" id="size" value="" size="30" maxlength="30" class="form-control" />
-                </p>
-                <p>
-                    Location of plants on the property
+                    <small class="form-text text-muted">For example, '2 trees', '3 acres', or '300 pounds'.</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Crop Location on the Property</label>
                     <input name="location" type="text" id="location" size="30" value="" maxlength="20" class="form-control" />
-                <p>
-                    Crop height (feet)
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Crop Height (feet)</label>
                     <input name="height" type="text" id="height" size="5" value="" maxlength="10" class="form-control" />
-                <p>
-                    Lowest produce height (feet)
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Lowest Produce Heigh (feet)</label>
                     <input name="lowest" type="text" id="lowest" size="5" value="" maxlength="10" class="form-control" />
-                </p>
-                <p>Does the crop have any fungus, disease or pest issues?</p>
-                <p id="indent">
-                    <label><input name="disease" type="radio" id="disease_0" value="No" checked="checked" /> No</label>&nbsp;&nbsp;&nbsp;
-                    <label><input type="radio" name="disease" value="Yes" id="disease_1" /> Yes </label><br />
-                    <label>
-                        Describe <input name="disease_text" type="text" id="disease_text" value="" size="25" maxlength="25" class="form-control" />
-                    </label>
-                </p>
-                <p>
-                    Which chemicals or supplements, if any, are used on or around the crop area that GleanSLO's more sensitive or iimmuno-suppressed volunteers should be aware of?<br />
-                    <input name="spray_text" type="text" id="spray_text" value="" size="80" maxlength="100" class="form-control" />
-                </p>
-                <p>
-                    What time of year is the crop usually ripe?
-                    <select name="month_ripe" id="when_ripe">
-                        <option value="01" selected="selected">[month]</option>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>What time of year is the crop usually ripe?</label>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <select class="form-control" name="month_ripe" id="when_ripe">
+                        <option value="01" selected="selected">Month</option>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -329,59 +326,102 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    <select name="week_ripe" id="when_ripe">
-                        <option value="01" selected="selected">[week]</option>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <select class="form-control" name="week_ripe" id="when_ripe">
+                        <option value="01" selected="selected">Week</option>
                         <option value="03">first week</option>
                         <option value="10">second week</option>
                         <option value="17">third week</option>
                         <option value="24">fourth week</option>
                     </select>
-                </p>
-                <p>Is there anything else you would like us to know (condition of the produce, access to the crops, preferred ways and times to contact you )?</p>
-                <p>
-                    <label>
-                        <textarea name="otherinfo" cols="80" rows="3" class="form-control" /></textarea>
-                    </label>
-                </p>
-                <p>I would like my donation to be acknowledged:</p>
-                <p id="indent">
-                    <label>
-                        <input name="recog" type="radio" value="Yes" checked="checked" /> Yes
-                    </label>&nbsp;&nbsp;&nbsp;
-                    <label><input type="radio" name="recog" value="No" /> No </label><br />
-                    <label>
-                        Acknowledge my donation as coming from: <input name="recog_text" type="text" value="" size="40" maxlength="60" class="form-control" />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        How did you hear about GleanSLO?
-                        <select name="howhear" id="howhear">
-                            <option value=" " selected="selected">[select]</option>
-                            <option value="Neighbor">Neighbor</option>
-                            <option value="GleanSLO web site">GleanSLO Web Site</option>
-                            <option value="SLO Food Bank">SLO Food Bank</option>
-                            <option value="GleanSLO volunteer">GleanSLO volunteer</option>
-                            <option value="Newspaper">Newspaper</option>
-                            <option value="Facebook">Facebook</option>
-                            <option value="Flyer">Flyer</option>
-                            <option value="Craigslist">Craigslist</option>
-                            <option value="Other urban harvesting group">Other urban harvesting group</option>
-                            <option value="Friend">Friend</option>
-                            <option value="Other">Other</option>
-                            <option value="Web search">Web search</option>
-                        </select>
-                    </label>
-                </p>
-                <div class="g-recaptcha" data-sitekey="6LfTB0sUAAAAABJ1NkgZTZH0JYEMrdGDKqqy9kT3"> </div><!-- This key is attached to the dyates@gleanweb.org Google account -->
-                <p>
-                    <label>
-                        <input class="button" style="font-weight:bold;" type="submit" name="submit" id="submit" value="Save" />
-                    </label>
-                    <input type="hidden" name="MM_insert" value="site_reg" />
-                </p>
-            </form>
-</section>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Does your crop have any fungus, disease, or pest issues?</label>
+                <div class="form-group col-md-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="disease" type="radio" id="disease_0" value="No" checked="checked" />
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="disease" value="Yes" id="disease_1" />
+                        <label class="form-check-label">Yes </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label pr-2">Describe:</label>
+                        <input class="form-check-input" name="disease_text" type="text" id="disease_text" value="" size="25" maxlength="25"  />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label>Which chemicals or supplements, if any, are used on or around the crop area that GleanSLO's more
+                        sensitive or immuno-suppressed volunteers should be aware of?</label>
+                    <input name="spray_text" type="text" id="spray_text" value="" size="80" maxlength="100" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label>Is there anything else you would like us to know (condition of the produce, access to the
+                        crops, preferred ways and times to contact you )?</label>
+                    <textarea name="otherinfo" cols="80" rows="3" class="form-control" /></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>I would like my donation to be acknowledged:</label>
+                <div class="form-group col-md-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="recog" type="radio" value="Yes" checked="checked" />
+                        <label class="form-check-label">Yes </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="recog" value="No" />
+                        <label class="form-check-label">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Acknowledge my donation as coming from:</label>
+                    <input name="recog_text" type="text" value="" size="40" maxlength="60" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>How did you hear about GleanSLO?</label>
+                    <select class="form-control" name="howhear" id="howhear">
+                        <option value=" " selected="selected">Please choose one.</option>
+                        <option value="Neighbor">Neighbor</option>
+                        <option value="GleanSLO web site">GleanSLO Web Site</option>
+                        <option value="SLO Food Bank">SLO Food Bank</option>
+                        <option value="GleanSLO volunteer">GleanSLO volunteer</option>
+                        <option value="Newspaper">Newspaper</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Flyer">Flyer</option>
+                        <option value="Craigslist">Craigslist</option>
+                        <option value="Other urban harvesting group">Other urban harvesting group</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
+                        <option value="Web search">Web search</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary" name="submit" id="submit" value="Save">Submit</button>
+                <input type="hidden" name="MM_insert" value="site-reg" />
+            </div>
+        </form>
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -412,9 +452,6 @@
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li class="list-inline-item">
-                            <a href="#">Resources</a>
-                        </li>
-                        <li class="list-inline-item">
                             <a href="administration.html">Administrative</a>
                         </li>
                     </ul>
@@ -422,7 +459,6 @@
             </div>
         </div>
     </footer>
-
 
 
     <!-- Bootstrap core JavaScript -->
@@ -439,6 +475,16 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
-    </page-section>
+    <script type="text/javascript">
+            function setFocus() { document.getElementById('farm').focus();}
+            function validateForm() {
+            var x = document.forms["site_reg"]["contact1"].value;
+            if (x=="" || x==null) { alert("Please enter the name of whom we can contact."); return false; }
+            var x = document.forms["site_reg"]["phone1"].value;
+            if (x=="" || x==null) { alert("Please enter a telephone number."); return false; }
+            }
+        </script>
+
+</body>
 
 </html>
