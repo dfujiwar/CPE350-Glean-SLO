@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,119 +28,139 @@
 
 <body id="page-top">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#page-top">Volunteer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-<section class="bg-light page-section" id="register">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading text-uppercase  text-center">Admin Login</h2>
-            </div>
-        </div>
-        <form class="needs-validation" action="http://www.gleanslo.org/login.php" id="login" name="login" method="POST" novalidate>
-            <div class="form-row">
-                <div class="form-group col-sm-6">
-                    <label for="user_name">Username:</label>
-                    <input type="text" class="form-control" id="user_name" name="user_name" required>
-                    <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Please enter your address.</div>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="user_password">Password:</label>
-                    <input type="password" class="form-control" id="user_password" name="user_password" required>
-                    <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Please enter your address.</div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary" name="submit" id="submit" value="Save">Login</button>
-                <input type="hidden" name="MM_insert" value="pickerinsertform" />
-            </div>
-        </div>
-        </form>
-    </div>
-</section>
-
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <span class="copyright">Copyright &copy; GleanSLO 2020</span>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/gleanslo?ref=hl">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+    <!-- ***************** Navigation Bar *****************************-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- LOGO IMAGE is on the line below. Edit the src path to change the logo image-->
+            <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <!--ABOUT-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.flickr.com/photos/gleanslo/sets">
-                            <i class="fab fa-flickr"></i>
-                        </a>
+                    <!--NEWS-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="annualReports.html">News</a>
                     </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/gleanslo/">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                    <!--DONATE-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
                     </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    <li class="list-inline-item">
-                        <a href="administration.html">Administrative</a>
+                    <!--VOLUNTEER-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Volunteer</a>
+                    </li>
+                    <!--CONTACT-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-</footer>
+    </nav>
+
+
+    <!--******************* Administration login ****************************-->
+    <section class="bg-light page-section" id="register">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-uppercase  text-center">Admin Login</h2>
+                </div>
+            </div>
+            <form class="needs-validation" action="http://www.gleanslo.org/login.php" id="login" name="login" method="POST" novalidate>
+                <div class="form-row">
+                    <!--Username-->
+                    <div class="form-group col-sm-6">
+                        <label for="user_name">Username:</label>
+                        <input type="text" class="form-control" id="user_name" name="user_name" required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                    <!--Password-->
+                    <div class="form-group col-sm-6">
+                        <label for="user_password">Password:</label>
+                        <input type="password" class="form-control" id="user_password" name="user_password" required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your address.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" name="submit" id="submit" value="Save">Login</button>
+                    <input type="hidden" name="MM_insert" value="pickerinsertform" />
+                </div>
+            </form>
+        </div>
+    </section>
 
 
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ***************************** Footer *****************************-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; GleanSLO 2020</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
 
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                        <!--Facebook-->
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/gleanslo?ref=hl">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
 
-<!-- Contact form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+                        <!--Flicker-->
+                        <li class="list-inline-item">
+                            <a href="https://www.flickr.com/photos/gleanslo/sets">
+                                <i class="fab fa-flickr"></i>
+                            </a>
+                        </li>
 
-<!-- Custom scripts for this template -->
-<script src="js/agency.min.js"></script>
+                        <!--Instagram-->
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/gleanslo/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Admin login link-->
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="administration.html">Administrative</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
 
 </body>
 

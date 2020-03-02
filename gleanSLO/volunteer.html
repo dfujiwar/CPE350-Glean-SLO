@@ -170,881 +170,939 @@ form{
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="annualReports.html">News</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#page-top">Volunteer</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
-              </li>
-          </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- ***************** Navigation Bar *****************************-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- LOGO IMAGE is on the line below. Edit the src path to change the logo image-->
+            <a class="navbar-brand js-scroll-trigger" href="index.html#page-top"><img class="logo img-fluid d-block mx-auto" src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <!--ABOUT-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+                    </li>
+                    <!--NEWS-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="annualReports.html">News</a>
+                    </li>
+                    <!--DONATE-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="donate.html">Donate</a>
+                    </li>
+                    <!--VOLUNTEER-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Volunteer</a>
+                    </li>
+                    <!--CONTACT-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="masthead">
-    <div class="volunteer">
-      <div class="container">
-        <div class="intro-text">
 
-          <div class="intro-text-main text-uppercase">If it's your first time gleaning, please register!</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="register.html">Register</a>
-          <div class="intro-text-main text-uppercase">Then continue to see our Harvest Calendar!</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#mainContent">
-            <i class="fas fa-arrow-down"></i>
-          </a>
+    <!-- ************************** Header ************************************-->
+    <header class="masthead">
+        <div class="volunteer">
+            <div class="container">
+                <div class="intro-text">
+
+                    <div class="intro-text-main text-uppercase">If it's your first time gleaning, please register!</div>
+                    <!--button links to register.html-->
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="register.html">Register</a>
+                    <div class="intro-text-main text-uppercase">Then continue to see our Harvest Calendar!</div>
+                    <!--button links to calender-->
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#mainContent">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
         </div>
         </div>
-      </div>
+    </header>
+
+    <!--**************************** Harvest Calender *******************************************-->
+    <div class="SH">
+        <section class="page-section">
+            <div id="mainContent">
+                <div class="container py-5">
+                    <!--Harvest Title-->
+                    <h2 class="section-heading text-uppercase  text-center">Harvests and Other Events</h2>
+                    <p>Before signing up for an event, please be sure that you and each person signing up has registered previously on the <a href="register.html" title="Harvester registration">Registration</a> page. If you have already registered as a volunteer you do not have to do so again. Each adult must sign up separately  for events. To sign up for an event, click on the 'Sign up for this event'  button. Once you sign up, you will receive a confirmation letter with the exact  address and detailed information about the event. If the roster is full, your name will be  added to a waiting list and you will receive an email if anyone ahead of you  cancels their spot.</p>
+                    <p>Move the mouse over harvests on the calendar to see details and a sign up link below the calendar. Green harvests have roster openings left; yellow harvests have a waiting list. <strong>If you are using a smart phone you may have to scroll the top half of the page to see everything.</strong></p>
+                </div>
+
+                <!--CALENDAR-->
+                <div id="calendar">
+                    <div class="table-responsive">
+                        <table id="caltable" align="center" class="table">
+                            <thead>
+                                <tr id="daysofweek">
+                                    <th scope="col">Sun</th>
+                                    <th scope="col">Mon</th>
+                                    <th scope="col">Tue</th>
+                                    <th scope="col">Wed</th>
+                                    <th scope="col">Thu</th>
+                                    <th scope="col">Fri</th>
+                                    <th scope="col">Sat</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <!--WEEK-->
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover" class="table">
+                                        <thead><tr><th>Jan 9</th></tr></thead>
+                                        <!--linked to pop5284 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5284">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Jan 10</th>
+                                            </tr>
+                                        </thead>
+                                        <!--linked to pop5280 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5280">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <thead><tr><th>Jan 11</th></tr></thead>
+                                        <!--linked to pop5301 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5301">
+                                            <td class="full" onmouseover="lookdown(this)" onmouseout="lookup(this,'tangerines')">tangerines </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--WEEK-->
+                            <tr id="wk4">
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 12</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 13</th></tr>
+                                        <!--linked to pop5306 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5306">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 14</th></tr>
+                                        <!--linked to pop5308 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5308">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'apples')">apples </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 15</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 16</th></tr>
+                                        <!--linked to pop5285 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5285">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 17</th></tr>
+                                        <!--linked to pop5307 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5307">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 18</th></tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--WEEK-->
+                            <tr id="wk5">
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 19</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 20</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 21</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 22</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 23</th></tr>
+                                        <!--linked to pop5286 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5286">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 24</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 25</th></tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--WEEK-->
+                            <tr id="wk6">
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 26</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 27</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 28</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 29</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 30</th></tr>
+                                        <!--linked to pop5287 at the bottom of file EVENT MODAL-->
+                                        <tr data-toggle="modal" data-target="#pop5287">
+                                            <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Jan 31</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 1</th></tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--WEEK-->
+                            <tr id="wk7">
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 2</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 3</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 4</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 5</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 6</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 7</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 8</th></tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!--WEEK-->
+                            <tr id="wk8">
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 9</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 10</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 11</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 12</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 13</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 14</th></tr>
+                                    </table>
+                                </td>
+                                <td style="background-color:#ededed;overflow:hidden;">
+                                    <table id="cell" class="table table-borderless table-condensed table-hover">
+                                        <tr><th>Feb 15</th></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br class="clearfloat" />
+                    </div>
+                </div>
+                <!-- end of calendar div----------------------------------------------- -->
+            </div>
+        </section>
     </div>
-  </header>
 
-  <!--Harvest calendar-->
-  <div  class="SH">
-      <section class="page-section">
-          <div id="mainContent" >
-			<div class="container py-5">
-				<h2 class="section-heading text-uppercase  text-center">Harvests and Other Events</h2>
-				<p>Before signing up for an event, please be sure that you and each person signing up has registered previously on the <a href="register.html" title="Harvester registration">Registration</a> page. If you have already registered as a volunteer you do not have to do so again. Each adult must sign up separately  for events. To sign up for an event, click on the 'Sign up for this event'  button. Once you sign up, you will receive a confirmation letter with the exact  address and detailed information about the event. If the roster is full, your name will be  added to a waiting list and you will receive an email if anyone ahead of you  cancels their spot.</p>
-				<p>Move the mouse over harvests on the calendar to see details and a sign up link below the calendar. Green harvests have roster openings left; yellow harvests have a waiting list. <strong>If you are using a smart phone you may have to scroll the top half of the page to see everything.</strong></p>
-			</div>
-            <div id = "calendar">
-              <div class="table-responsive">
-                <table id="caltable" align="center" class="table">
-                  <thead>
-                    <tr id="daysofweek">
-                      <th scope="col">Sun</th>
-                      <th scope="col">Mon</th>
-                      <th scope="col">Tue</th>
-                      <th scope="col">Wed</th>
-                      <th scope="col">Thu</th>
-                      <th scope="col">Fri</th>
-                      <th scope="col">Sat</th>
-                    </tr>
-                  </thead>
-                <tr>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover" class="table">
-                      <thead><tr><th>Jan 9</th></tr></thead>
 
-                      <tr data-toggle="modal" data-target="#pop5284">
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market</td>
-                      </tr>
+    <!--******************************** MODALS ******************************************-->
+    <!--pop5284-->
+    <div class="modal fade" id="pop5284" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="TermsTitle">Farmer's Market Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Thursday, Jan 9 at 7:30 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Farmer's Market</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>San Luis Obispo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <thead><tr>
-                        <th>Jan 10</th>
-                      </tr></thead>
-                      <tr data-toggle="modal" data-target="#pop5280">
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
-                      </tr>
+                    <p>
+                        This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                        Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5284" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5280-->
+    <div class="modal fade" id="pop5280" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5280title">Kiwifruit Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Friday, Jan 10 at 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Kiwifruit</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>Nipomo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <thead><tr><th>Jan 11</th></tr></thead>
+                    <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5280" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
 
-                      <tr data-toggle="modal" data-target="#pop5301">
-                        <td class="full" onmouseover="lookdown(this)" onmouseout="lookup(this,'tangerines')">tangerines </td>
-                      </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5301-->
+    <div class="modal fade" id="pop5301" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5301Title">Tangerine Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Saturday, Jan 11 at 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Tangerines</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>Arroyo Grande</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                </tr>
-                <tr id="wk4">
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 12</th></tr>
+                    <p>
+                        This is a neighborhood harvest of tangerines at a home in Arroyo Grande. Ladders and pole pickers may
+                        be necessary to reach all of the fruit. Ladder-friendly Adults and teens only.
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5301" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Add name to waitlist!" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5306-->
+    <div class="modal fade" id="pop5306" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5306Title">Kiwifruit Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Monday, Jan 13 at 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Kiwifruit</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>Nipomo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 13</th></tr>
+                    <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5306" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
 
-                      <tr data-toggle="modal" data-target="#pop5306">
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
-                      </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5308-->
+    <div class="modal fade" id="pop5308" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5308Title">Apple Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Tuesday, Jan 14 at 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Apples</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>SLO, See Canyon</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                 </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 14</th></tr>
+                    <p>
+                        This is an apple glean at an orchard in See Canyon- read special instructions about where to meet
+                        after signing up. Adults and teens only, please!
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5308" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
 
-                      <tr data-toggle="modal" data-target="#pop5308">
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'apples')">apples </td>
-                      </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5285-->
+    <div class="modal fade" id="pop5285" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5308Title">Farmer's Market Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Thursday, Jan 16 at 7:30 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Farmer's Market</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>San Luis Obispo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 15</th></tr>
+                    <p>
+                        This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                        Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5285" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5307-->
+    <div class="modal fade" id="pop5307" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5307Title">Kiwifruit Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Friday, Jan 17 at 9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Kiwifruit</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>Nipomo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 16</th></tr>
+                    <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5307" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
 
-                      <tr data-toggle="modal" data-target="#pop5285">
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
-                      </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop5286-->
+    <div class="modal fade" id="pop5286" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5286Title">Farmer's Market Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Thursday, Jan 23 at 7:30 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Farmer's Market</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>San Luis Obispo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                  <td style="background-color:#ededed;overflow:hidden;">
-                    <table id="cell" class="table table-borderless table-condensed table-hover">
-                      <tr><th>Jan 17</th></tr>
+                    <p>
+                        This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                        Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5286" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
 
-                      <tr data-toggle="modal" data-target="#pop5307" >
-                        <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'kiwifruits')">kiwifruits </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 18</th></tr>
-                  </table>
-                </td>
-              </tr>
-              <tr id="wk5">
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 19</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 20</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 21</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 22</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 23</th></tr>
-
-                    <tr data-toggle="modal" data-target="#pop5286" >
-                      <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 24</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 25</th></tr>
-                  </table>
-                </td>
-              </tr>
-              <tr id="wk6">
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 26</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 27</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 28</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 29</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 30</th></tr>
-
-                    <tr data-toggle="modal" data-target="#pop5287">
-                      <td class="notfull" onmouseover="lookdown(this)" onmouseout="lookup(this,'Farmers Market')">Farmers Market </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Jan 31</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 1</th></tr>
-                  </table>
-                </td>
-              </tr>
-              <tr id="wk7">
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 2</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 3</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 4</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 5</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 6</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 7</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 8</th></tr>
-                  </table>
-                </td>
-              </tr>
-              <tr id="wk8">
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 9</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 10</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 11</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 12</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 13</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 14</th></tr>
-                  </table>
-                </td>
-                <td style="background-color:#ededed;overflow:hidden;">
-                  <table id="cell" class="table table-borderless table-condensed table-hover">
-                    <tr><th>Feb 15</th></tr>
-                  </table>
-                </td>
-              </tr>
-              </table>
-                <br class="clearfloat" />
-              </div>
-            </div><!-- end of calendar div----------------------------------------------- -->
-          </div>
-      </section>
-  </div>
-
-  <div class="modal fade" id="pop5284" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="TermsTitle">Farmer's Market Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-              <tr>
-                <th scope="row">When</th>
-                <td>Thursday, Jan 9 at 7:30 PM</td>
-              </tr>
-              <tr>
-                <th scope="row">Crop or task</th>
-                <td>Farmer's Market</td>
-              </tr>
-              <tr>
-                <th scope="row">General Location</th>
-                <td>San Luis Obispo</td>
-              </tr>
-              <tr>
-                <th scope="row">Total volunteers needed</th>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th scope="row">Number on roster</th>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row">Number on waiting list</th>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>This is a market collection in downtown SLO at the Thursday night Farmers Market!
-            Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.</p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5284"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal fade" id="pop5280" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5280title">Kiwifruit Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!--pop5287-->
+    <div class="modal fade" id="pop5287" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="pop5287Title">Farmer's Market Harvest</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">When</th>
+                                <td>Thursday, Jan 30 at 7:30 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Crop or task</th>
+                                <td>Farmer's Market</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">General Location</th>
+                                <td>San Luis Obispo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Total volunteers needed</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on roster</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Number on waiting list</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        This is a market collection in downtown SLO at the Thursday night Farmers Market!
+                        Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.
+                    </p>
+                    <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
+                </div>
+                <div class="modal-footer">
+                    <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
+                        <input name="harvesttemp" type="hidden" value="5287" />
+                        <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Friday, Jan 10 at 9:00 AM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Kiwifruit</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>Nipomo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>20</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>11</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5280"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
     </div>
-  </div>
-
-  <div class="modal fade" id="pop5301" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5301Title">Tangerine Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Saturday, Jan 11 at 9:00 AM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Tangerines</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>Arroyo Grande</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>4</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>4</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>1</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a neighborhood harvest of tangerines at a home in Arroyo Grande. Ladders and pole pickers may
-            be necessary to reach all of the fruit. Ladder-friendly Adults and teens only. </p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5301"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Add name to waitlist!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5306" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5306Title">Kiwifruit Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Monday, Jan 13 at 9:00 AM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Kiwifruit</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>Nipomo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>20</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5306"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5308" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5308Title">Apple Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Tuesday, Jan 14 at 9:00 AM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Apples</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>SLO, See Canyon</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>20</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is an apple glean at an orchard in See Canyon- read special instructions about where to meet
-            after signing up. Adults and teens only, please!  </p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5308"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5285" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5308Title">Farmer's Market Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Thursday, Jan 16 at 7:30 PM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Farmer's Market</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>San Luis Obispo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>2</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a market collection in downtown SLO at the Thursday night Farmers Market!
-            Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.</p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5285"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5307" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5307Title">Kiwifruit Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Friday, Jan 17 at 9:00 AM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Kiwifruit</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>Nipomo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>20</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a harvest of kiwis from a private farm in Nipomo- Adults and teens only, please! </p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5307"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5286" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5286Title">Farmer's Market Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Thursday, Jan 23 at 7:30 PM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Farmer's Market</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>San Luis Obispo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>2</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a market collection in downtown SLO at the Thursday night Farmers Market!
-            Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.</p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5286"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pop5287" tabindex="-1" role="dialog" aria-labelledby="TermsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="pop5287Title">Farmer's Market Harvest</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <th scope="row">When</th>
-              <td>Thursday, Jan 30 at 7:30 PM</td>
-            </tr>
-            <tr>
-              <th scope="row">Crop or task</th>
-              <td>Farmer's Market</td>
-            </tr>
-            <tr>
-              <th scope="row">General Location</th>
-              <td>San Luis Obispo</td>
-            </tr>
-            <tr>
-              <th scope="row">Total volunteers needed</th>
-              <td>2</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on roster</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th scope="row">Number on waiting list</th>
-              <td>0</td>
-            </tr>
-            </tbody>
-          </table>
-          <p>This is a market collection in downtown SLO at the Thursday night Farmers Market!
-            Please do not sign up for this glean unless you have been trained specifically for the SLO Farmer's Market.</p>
-          <p><strong>Getting there:</strong> You will see the harvest address after signing up.  </p>
-        </div>
-        <div class="modal-footer">
-          <form id="signup" name="signup" method="post" action="http://www.gleanslo.org/signup.php?access=public">
-            <input name="harvesttemp" type="hidden" value="5287"/>
-            <input class="btn btn-primary" type="submit" name="Submit2" id="Submit2" value="Sign up for this event!" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
-<!-- Footer -->
+    <!-- ***************************** Footer *****************************-->
     <footer class="footer bg-light">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; GleanSLO 2020</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/gleanslo?ref=hl">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.flickr.com/photos/gleanslo/sets">
-                  <i class="fab fa-flickr"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/gleanslo/">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="administration.html">Administrative</a>
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; GleanSLO 2020</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+
+                        <!--Facebook-->
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/gleanslo?ref=hl">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+
+                        <!--Flicker-->
+                        <li class="list-inline-item">
+                            <a href="https://www.flickr.com/photos/gleanslo/sets">
+                                <i class="fab fa-flickr"></i>
+                            </a>
+                        </li>
+
+                        <!--Instagram-->
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/gleanslo/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Admin login link-->
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="administration.html">Administrative</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
 
 
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Contact form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-<!-- Custom scripts for this template -->
-<script src="js/agency.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
 
-<!---Calendar scripts --->
-<script>
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
+    <!---Calendar scripts --->
+    <script>
+        (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
         form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
+        if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        }
+        form.classList.add('was-validated');
         }, false);
-      });
-    }, false);
-  })();
-</script>
-<script type="text/javascript">
-  function lookdown(ele) { ele.innerHTML="Click to see details!"; }
-  function lookup(ele,crop) { ele.innerHTML=crop; }
-</script>
+        });
+        }, false);
+        })();
+    </script>
+    <script type="text/javascript">
+        function lookdown(ele) { ele.innerHTML="Click to see details!"; }
+        function lookup(ele,crop) { ele.innerHTML=crop; }
+    </script>
 
 </body>
 
